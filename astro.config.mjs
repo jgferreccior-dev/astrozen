@@ -5,6 +5,7 @@ import { fontProviders } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://joseferreccio-digital-josefr-89-9123.vercel.app",
   fonts: [
     {
       provider: fontProviders.fontsource(),
