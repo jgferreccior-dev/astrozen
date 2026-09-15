@@ -19,7 +19,7 @@ export const SITE_CONFIG: SiteConfig = {
     { text: "GitHub", href: "https://github.com/jgferreccior-dev" },
   ],
   socialImage: "/zen-og.png",
-  canonicalURL: "https://joseferreccio-digital-1to6slsu0-josefr-89-9123.vercel.app/",
+  canonicalURL: "https://joseferreccio-digital-josefr-89-9123.vercel.app/",
 };
 
 export const SITE_CONTENT: SiteContent = {
