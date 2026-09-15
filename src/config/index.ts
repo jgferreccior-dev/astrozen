@@ -9,6 +9,7 @@ export const SITE_CONFIG: SiteConfig = {
   siteLogo: "/favicon.svg",
   navLinks: [
     { text: "Proyectos", href: "#projects" },
+    { text: "Skills & Tools", href: "#skills" },
     { text: "Experiencia", href: "#experience" },
     { text: "Sobre mí", href: "#about" },
     { text: "Contacto", href: "#contact" },
