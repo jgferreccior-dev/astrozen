@@ -15,7 +15,7 @@ const { projects } = Astro.props;
     Casos donde estrategia, contenido, distribución y datos se combinan para construir audiencias y mejorar resultados digitales.
   </p>
   {
-    projects.map(({ name, summary, image, linkSource }, index) => {
+    projects.map(({ name, summary, image, linkPreview, linkSource }, index) => {
       const top = 98 + index * 40;
       return (
         <div
@@ -31,14 +31,14 @@ const { projects } = Astro.props;
                 {name}
               </h3>
               <p class="max-w-lg text-base leading-7 text-neutral">{summary}</p>
-              {linkSource && (
+              {(linkPreview || linkSource) && (
                 <a
-                  href={linkSource}
-                  target="_blank"
-                  rel="noreferrer"
+                  href={linkPreview || linkSource}
+                  target={linkPreview ? undefined : "_blank"}
+                  rel={linkPreview ? undefined : "noreferrer"}
                   class="mt-8 inline-block text-sm font-medium text-white hover:underline"
                 >
-                  Ver referencia ↗
+                  {linkPreview ? "Ver caso de estudio →" : "Ver referencia ↗"}
                 </a>
               )}
             </div>
