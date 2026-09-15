@@ -1,0 +1,37 @@
+---
+import Section from "./Section.astro";
+
+const skillGroups = [
+  {
+    title: "Estrategia & Marketing Digital",
+    skills: ["Estrategia Digital", "Content Strategy", "Content Marketing", "Performance Marketing", "Meta Ads"],
+  },
+  {
+    title: "SEO & Analítica",
+    skills: ["SEO", "Google Analytics", "Google Search Console", "KPI & Reporting", "Segmentación de audiencias"],
+  },
+  {
+    title: "Social Media & Contenidos",
+    skills: ["Social Media Management", "Community Management", "Copywriting", "WordPress", "TikTok Business"],
+  },
+  {
+    title: "Producción & Herramientas",
+    skills: ["Hootsuite", "Canva", "Adobe Photoshop", "Adobe Premiere", "Adobe Audition", "Microsoft Excel", "Google Sheets"],
+  },
+];
+---
+
+<Section text="Skills & Tools" href="skills">
+  <div class="grid gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 md:grid-cols-2">
+    {skillGroups.map((group) => (
+      <article class="bg-black p-7 md:p-9">
+        <h3 class="font-serif text-2xl font-semibold text-white">{group.title}</h3>
+        <div class="mt-6 flex flex-wrap gap-2">
+          {group.skills.map((skill) => (
+            <span class="rounded-full border border-white/10 px-3 py-2 text-sm text-neutral">{skill}</span>
+          ))}
+        </div>
+      </article>
+    ))}
+  </div>
+</Section>
