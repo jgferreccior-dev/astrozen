@@ -4,9 +4,14 @@ import { Font } from "astro:assets";
 import { SITE_CONFIG } from "@config";
 import Footer from "@components/Footer.astro";
 
+interface Props {
+  title?: string;
+  description?: string;
+}
+
 const {
-  title,
-  description,
+  title: siteTitle,
+  description: siteDescription,
   siteLogo,
   navLinks,
   lang,
@@ -16,8 +21,10 @@ const {
   canonicalURL,
 } = SITE_CONFIG;
 
-const resolvedCanonical = canonicalURL ?? "https://astrozen-git-main-josefr-89-9123.vercel.app/";
-const ogImgUrl = new URL(socialImage, resolvedCanonical).href;
+const { title = siteTitle, description = siteDescription } = Astro.props;
+const canonicalBase = canonicalURL ?? "https://astrozen-josefr-89-9123.vercel.app/";
+const resolvedCanonical = new URL(Astro.url.pathname, canonicalBase).href;
+const ogImgUrl = new URL(socialImage, canonicalBase).href;
 ---
 
 <!doctype html>
@@ -26,23 +33,27 @@ const ogImgUrl = new URL(socialImage, resolvedCanonical).href;
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="author" content={author} />
+    <meta name="robots" content="index, follow" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={resolvedCanonical} />
+    <link rel="icon" type="image/svg+xml" href={siteLogo} />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
 
     <Font cssVariable="--font-gabarito" preload />
     <Font cssVariable="--font-be-vietnam-pro" preload />
 
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_PE" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={resolvedCanonical} />
     <meta property="og:image" content={ogImgUrl} />
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={resolvedCanonical} />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={ogImgUrl} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={resolvedCanonical} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImgUrl} />
   </head>
   <body class="bg-black font-sans">
     <Header siteLogo={siteLogo} navLinks={navLinks} />
