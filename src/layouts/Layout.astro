@@ -51,6 +51,7 @@ const profileSchemaJson = JSON.stringify(profileSchema);
     <meta name="robots" content="index, follow" />
     <meta name="viewport" content="width=device-width" />
     <link rel="canonical" href={resolvedCanonical} />
+    <link rel="sitemap" href="/sitemap.xml" />
     <link rel="icon" type="image/svg+xml" href={siteLogo} />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
@@ -65,6 +66,7 @@ const profileSchemaJson = JSON.stringify(profileSchema);
     <meta property="og:description" content={description} />
     <meta property="og:url" content={resolvedCanonical} />
     <meta property="og:image" content={ogImgUrl} />
+    <meta property="og:image:alt" content={`${author} — ${title}`} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content={resolvedCanonical} />
     <meta name="twitter:title" content={title} />
@@ -72,8 +74,14 @@ const profileSchemaJson = JSON.stringify(profileSchema);
     <meta name="twitter:image" content={ogImgUrl} />
   </head>
   <body class="bg-black font-sans">
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-primary focus:px-4 focus:py-3 focus:text-sm focus:font-semibold focus:text-white"
+    >
+      Saltar al contenido
+    </a>
     <Header siteLogo={siteLogo} navLinks={navLinks} />
-    <main class="mx-auto max-w-5xl px-5">
+    <main id="main-content" class="mx-auto max-w-5xl px-5">
       <slot />
       {isHome && <TrustStrip />}
     </main>
