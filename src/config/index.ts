@@ -15,7 +15,7 @@ export const SITE_CONFIG: SiteConfig = {
     { text: "Contacto", href: "#contact" },
   ],
   socialLinks: [
-    { text: "LinkedIn", href: "https://www.linkedin.com/in/jose-ferreccio-4211901b/" },
+    { text: "LinkedIn", href: "https://www.linkedin.com/in/jose-ferreccio-4211901b5/" },
     { text: "GitHub", href: "https://github.com/jgferreccior-dev" },
   ],
   socialImage: "/zen-og.png",
