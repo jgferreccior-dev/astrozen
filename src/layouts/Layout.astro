@@ -7,6 +7,7 @@ import Footer from "@components/Footer.astro";
 interface Props {
   title?: string;
   description?: string;
+  profilePage?: boolean;
 }
 
 const {
@@ -21,7 +22,7 @@ const {
   canonicalURL,
 } = SITE_CONFIG;
 
-const { title = siteTitle, description = siteDescription } = Astro.props;
+const { title = siteTitle, description = siteDescription, profilePage = false } = Astro.props;
 const canonicalBase = canonicalURL ?? "https://astrozen-josefr-89-9123.vercel.app/";
 const resolvedCanonical = new URL(Astro.url.pathname, canonicalBase).href;
 const ogImgUrl = new URL(socialImage, canonicalBase).href;
@@ -54,7 +55,7 @@ const profileSchema = {
     <Font cssVariable="--font-gabarito" preload />
     <Font cssVariable="--font-be-vietnam-pro" preload />
 
-    <script type="application/ld+json" set:html={JSON.stringify(profileSchema)}></script>
+    {profilePage && <script type="application/ld+json" set:html={JSON.stringify(profileSchema)}></script>}
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_PE" />
     <meta property="og:title" content={title} />
