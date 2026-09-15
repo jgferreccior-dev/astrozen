@@ -13,31 +13,33 @@ const { caseStudy } = Astro.props;
 ---
 
 <Layout title={`${caseStudy.title} — José Gerardo Ferreccio Riega`} description={caseStudy.intro}>
-  <article class="py-20 md:py-28">
-    <a href="/#projects" class="mb-12 inline-block text-sm text-neutral hover:text-white">← Volver a proyectos</a>
+  <article class="py-16 md:py-28">
+    <a href="/#projects" class="mb-10 inline-flex items-center gap-2 text-sm text-neutral transition-colors hover:text-white focus:outline-none focus:ring-2 focus:ring-primary md:mb-12">
+      ← Volver a proyectos
+    </a>
 
     <header class="max-w-4xl">
       <p class="mb-5 text-xs font-medium uppercase tracking-[0.2em] text-primary">{caseStudy.eyebrow}</p>
-      <h1 class="font-serif text-5xl font-bold tracking-tightest text-white md:text-7xl">{caseStudy.title}</h1>
-      <p class="mt-7 max-w-3xl text-lg leading-8 text-neutral md:text-xl">{caseStudy.intro}</p>
-      <p class="mt-5 text-sm font-medium text-white/70">{caseStudy.organization}</p>
+      <h1 class="font-serif text-4xl font-bold leading-tight tracking-tightest text-white sm:text-5xl md:text-7xl">{caseStudy.title}</h1>
+      <p class="mt-6 max-w-3xl text-base leading-8 text-neutral md:mt-7 md:text-xl">{caseStudy.intro}</p>
+      <p class="mt-4 text-sm font-medium text-white/70">{caseStudy.organization}</p>
     </header>
 
-    <div class="mt-14 overflow-hidden rounded-2xl border border-white/10 bg-[#151b24]">
-      <img src={caseStudy.image} alt={caseStudy.title} class="w-full" width="1200" height="700" />
+    <div class="mt-10 overflow-hidden rounded-2xl border border-white/10 bg-[#151b24] md:mt-14">
+      <img src={caseStudy.image} alt={`Vista del proyecto ${caseStudy.title}`} class="h-auto w-full" width="1200" height="700" loading="eager" />
     </div>
 
-    <div class="my-16 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 md:grid-cols-4">
+    <div class="my-12 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 md:my-16 md:grid-cols-4">
       {caseStudy.metrics.map(([value, label]) => (
-        <div class="bg-black p-6 md:p-8">
-          <p class="font-serif text-4xl font-bold text-primary md:text-5xl">{value}</p>
-          <p class="mt-2 text-sm leading-6 text-neutral">{label}</p>
+        <div class="bg-black p-5 md:p-8">
+          <p class="font-serif text-3xl font-bold text-primary md:text-5xl">{value}</p>
+          <p class="mt-2 text-xs leading-6 text-neutral md:text-sm">{label}</p>
         </div>
       ))}
     </div>
 
-    <div class="grid gap-16 md:grid-cols-[1fr_280px] md:gap-20">
-      <div class="space-y-16">
+    <div class="grid gap-12 md:grid-cols-[1fr_280px] md:gap-20">
+      <div class="space-y-14 md:space-y-16">
         <section>
           <p class="mb-4 text-xs font-medium uppercase tracking-[0.18em] text-neutral">01 · El reto</p>
           <h2 class="mb-5 font-serif text-3xl font-semibold text-white md:text-4xl">Objetivo y contexto</h2>
@@ -64,12 +66,12 @@ const { caseStudy } = Astro.props;
       <aside class="h-fit border-t border-white/10 pt-6 md:border-l md:border-t-0 md:pl-8 md:pt-0">
         <p class="mb-4 text-xs font-medium uppercase tracking-[0.18em] text-neutral">Especialidades</p>
         <p class="text-sm leading-7 text-white">{caseStudy.skills}</p>
-        <a href={caseStudy.reference} target="_blank" rel="noreferrer" class="mt-8 inline-block text-sm font-medium text-primary hover:underline">Ver referencia ↗</a>
+        <a href={caseStudy.reference} target="_blank" rel="noreferrer" class="mt-8 inline-block text-sm font-medium text-primary hover:underline focus:outline-none focus:ring-2 focus:ring-primary">Ver referencia ↗</a>
       </aside>
     </div>
 
-    <div class="mt-20 border-t border-white/10 pt-8">
-      <a href="/#projects" class="text-sm font-medium text-white hover:text-primary">← Explorar más proyectos</a>
+    <div class="mt-16 border-t border-white/10 pt-8 md:mt-20">
+      <a href="/#projects" class="text-sm font-medium text-white transition-colors hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary">← Explorar más proyectos</a>
     </div>
   </article>
 </Layout>
