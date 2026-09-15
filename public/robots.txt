@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://astrozen-josefr-89-9123.vercel.app/sitemap.xml
+Sitemap: https://joseferreccio-digital-josefr-89-9123.vercel.app/sitemap.xml
