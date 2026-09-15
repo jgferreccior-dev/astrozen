@@ -39,6 +39,7 @@ const profileSchema = {
     "sameAs": socialLinks.map((link) => link.href),
   },
 };
+const profileSchemaJson = JSON.stringify(profileSchema);
 ---
 
 <!doctype html>
@@ -57,7 +58,7 @@ const profileSchema = {
     <Font cssVariable="--font-gabarito" preload />
     <Font cssVariable="--font-be-vietnam-pro" preload />
 
-    {(profilePage || isHome) && <script type="application/ld+json" set:html={JSON.stringify(profileSchema)}></script>}
+    {(profilePage || isHome) && <script type="application/ld+json" is:inline set:html={profileSchemaJson}></script>}
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_PE" />
     <meta property="og:title" content={title} />
