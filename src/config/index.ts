@@ -17,15 +17,13 @@ export const SITE_CONFIG: SiteConfig = {
     { text: "GitHub", href: "https://github.com/jgferreccior-dev" },
   ],
   socialImage: "/zen-og.png",
-  canonicalURL: "https://astro-zen.vercel.app",
 };
 
 export const SITE_CONTENT: SiteContent = {
   hero: {
     name: "José Gerardo Ferreccio Riega",
     specialty: "Digital Media & SEO Specialist",
-    summary:
-      "Profesional de Marketing, Comunicación y Medios Digitales especializado en estrategia digital, SEO, Social Media, Content Strategy, Performance Marketing y analítica.",
+    summary: "Profesional de Marketing, Comunicación y Medios Digitales especializado en estrategia digital, SEO, Social Media, Content Strategy, Performance Marketing y analítica.",
     email: "jgferreccior@gmail.com",
   },
   experience: [
