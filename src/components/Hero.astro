@@ -15,13 +15,22 @@ const { name, specialty, summary, email } = Astro.props;
   <div class="absolute inset-x-0 bottom-0 top-28 -z-10 bg-gradient-to-r from-[#05080d] via-[#07101a]/90 to-[#07101a]/58" aria-hidden="true"></div>
   <div class="absolute inset-x-0 bottom-0 top-28 -z-10 bg-gradient-to-t from-[#05080d] via-[#05080d]/55 to-transparent" aria-hidden="true"></div>
 
-  <div class="mx-auto max-w-5xl">
-    <div class="flex min-h-28 items-end pb-5 pt-6 md:pb-6">
-      <p class="text-xs font-semibold uppercase tracking-[0.2em] text-white/75 sm:text-sm">
-        {name}
-        <span class="mx-2 text-primary">·</span>
-        {specialty}
-      </p>
+  <div class="relative z-10 mx-auto max-w-5xl">
+    <div class="flex min-h-28 flex-col justify-center gap-3 py-5 md:flex-row md:items-center md:justify-between md:gap-8">
+      <div class="min-w-0">
+        <p class="text-sm font-semibold tracking-tight text-white sm:text-base md:text-lg">
+          {name}
+        </p>
+        <p class="mt-1 text-[10px] font-medium uppercase tracking-[0.16em] text-white/55 sm:text-xs">
+          {specialty}
+        </p>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-x-5 gap-y-2 text-[10px] font-medium uppercase tracking-[0.12em] text-white/65 sm:text-xs md:justify-end">
+        <a class="transition-colors hover:text-white" href={`mailto:${email}`}>{email}</a>
+        <a class="transition-colors hover:text-white" href="https://www.linkedin.com/in/jose-ferreccio-4211901b/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="transition-colors hover:text-white" href="https://github.com/jgferreccior-dev" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
     </div>
 
     <div class="pt-12 md:pt-16">
