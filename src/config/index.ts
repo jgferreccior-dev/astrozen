@@ -11,13 +11,14 @@ export const SITE_CONFIG: SiteConfig = {
     { text: "Proyectos", href: "#projects" },
     { text: "Experiencia", href: "#experience" },
     { text: "Sobre mí", href: "#about" },
+    { text: "Contacto", href: "#contact" },
   ],
   socialLinks: [
-    { text: "LinkedIn", href: "https://www.linkedin.com/in/jose-ferreccio-4211901b5/" },
+    { text: "LinkedIn", href: "https://www.linkedin.com/in/jose-ferreccio-4211901b/" },
     { text: "GitHub", href: "https://github.com/jgferreccior-dev" },
   ],
   socialImage: "/zen-og.png",
-  canonicalURL: "https://astrozen-josefr-89-9123.vercel.app/",
+  canonicalURL: "https://joseferreccio-digital.vercel.app/",
 };
 
 export const SITE_CONTENT: SiteContent = {
@@ -122,10 +123,6 @@ export const SITE_CONTENT: SiteContent = {
     },
   ],
   about: {
-    description: `Soy José Gerardo Ferreccio Riega, profesional de Marketing, Comunicación y Medios Digitales con experiencia en medios de comunicación y sector académico.
-
-Mi experiencia combina estrategia digital, contenidos, SEO, Social Media, Performance Marketing, analítica y comunicación institucional. He trabajado en proyectos digitales y multiplataforma, coordinando equipos y transformando objetivos de comunicación y negocio en acciones orientadas a resultados.
-
-Me interesa desarrollar proyectos donde estrategia, contenido y datos trabajen juntos para construir audiencias, mejorar el rendimiento digital y generar impacto.`,
+    description: `Soy José Gerardo Ferreccio Riega, profesional de Marketing, Comunicación y Medios Digitales con experiencia en medios de comunicación y sector académico.\n\nMi experiencia combina estrategia digital, contenidos, SEO, Social Media, Performance Marketing, analítica y comunicación institucional. He trabajado en proyectos digitales y multiplataforma, coordinando equipos y transformando objetivos de comunicación y negocio en acciones orientadas a resultados.\n\nMe interesa desarrollar proyectos donde estrategia, contenido y datos trabajen juntos para construir audiencias, mejorar el rendimiento digital y generar impacto.`,
   },
 };
