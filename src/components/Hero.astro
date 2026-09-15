@@ -5,23 +5,54 @@ type Props = HeroProps;
 const { name, specialty, summary, email } = Astro.props;
 ---
 
-<section class="py-24 md:py-32" id="#hero">
+<section class="py-24 md:py-32" id="hero">
+  <p class="mb-6 text-sm font-medium uppercase tracking-[0.2em] text-neutral">
+    Marketing · Comunicación · Medios Digitales
+  </p>
   <h1
-    class="mb-1.5 font-serif text-7xl font-bold tracking-tightest text-white sm:text-8xl md:mb-0 md:text-9xl"
+    class="mb-3 max-w-5xl font-serif text-6xl font-bold tracking-tightest text-white sm:text-7xl md:text-8xl"
   >
     {name}
   </h1>
   <p
-    class="mb-9 font-serif text-4xl leading-11.5 font-bold tracking-tighter text-primary sm:text-5xl md:text-6xl"
+    class="mb-8 max-w-4xl font-serif text-3xl leading-tight font-bold tracking-tighter text-primary sm:text-4xl md:text-5xl"
   >
     {specialty}
   </p>
-  <p class="mb-16 text-base font-normal text-neutral md:text-lg">
+  <p class="mb-10 max-w-3xl text-base leading-7 font-normal text-neutral md:text-lg">
     {summary}
   </p>
 
+  <div class="mb-14 flex flex-wrap gap-3 text-sm text-white/80">
+    <span class="rounded-full border border-white/15 px-4 py-2">Estrategia Digital</span>
+    <span class="rounded-full border border-white/15 px-4 py-2">SEO</span>
+    <span class="rounded-full border border-white/15 px-4 py-2">Content Strategy</span>
+    <span class="rounded-full border border-white/15 px-4 py-2">Social Media</span>
+    <span class="rounded-full border border-white/15 px-4 py-2">Performance Marketing</span>
+    <span class="rounded-full border border-white/15 px-4 py-2">Analítica</span>
+  </div>
+
+  <div class="mb-14 grid max-w-4xl grid-cols-2 gap-6 border-y border-white/10 py-8 sm:grid-cols-4">
+    <div>
+      <p class="font-serif text-4xl font-bold text-primary">+275%</p>
+      <p class="mt-1 text-sm text-neutral">alcance digital</p>
+    </div>
+    <div>
+      <p class="font-serif text-4xl font-bold text-primary">+802%</p>
+      <p class="mt-1 text-sm text-neutral">clics</p>
+    </div>
+    <div>
+      <p class="font-serif text-4xl font-bold text-primary">+30%</p>
+      <p class="mt-1 text-sm text-neutral">tráfico web</p>
+    </div>
+    <div>
+      <p class="font-serif text-4xl font-bold text-primary">145K+</p>
+      <p class="mt-1 text-sm text-neutral">artículos gestionados</p>
+    </div>
+  </div>
+
   <a
-    class="inline-block rounded-full bg-primary px-8 py-5 text-sm leading-5 font-medium text-[#fff]"
-    href={`mailto:${email}`}>Get in Touch</a
+    class="inline-block rounded-full bg-primary px-8 py-4 text-sm leading-5 font-medium text-[#fff] transition-opacity hover:opacity-85"
+    href={`mailto:${email}`}>Hablemos</a
   >
 </section>
