@@ -6,7 +6,7 @@ export const SITE_CONFIG: SiteConfig = {
   description:
     "Portfolio profesional de José Gerardo Ferreccio Riega, Digital Media & SEO Specialist especializado en estrategia digital, SEO, contenidos, Social Media, Performance Marketing y analítica.",
   lang: "es",
-  siteLogo: "/jose-ferreccio.jpg",
+  siteLogo: "/favicon.svg",
   navLinks: [
     { text: "Proyectos", href: "#projects" },
     { text: "Experiencia", href: "#experience" },
@@ -38,7 +38,6 @@ export const SITE_CONTENT: SiteContent = {
         "Incrementé el alcance de la comunidad digital en 275% y las visualizaciones de contenido en 448% en un trimestre, mediante calendarios editoriales, segmentación de audiencias y pauta digital en Meta Ads.",
         "Elevé los clics hacia inscripciones y contenidos académicos en 802% y alcancé 3.1% de engagement, mediante estrategias de Content Strategy adaptadas a audiencias de posgrado en Facebook e Instagram.",
         "Gestiono la comunicación digital del CICAJ, subunidad del Departamento Académico de Derecho de la PUCP, mediante planificación, producción y publicación de contenidos académicos, institucionales y de investigación.",
-        "Coordino con docentes, investigadores y equipos académicos para transformar información jurídica especializada en contenidos claros y atractivos, alineados con objetivos de comunicación y captación.",
       ],
     },
     {
@@ -48,7 +47,7 @@ export const SITE_CONTENT: SiteContent = {
       endDate: "Actualidad",
       summary: [
         "Incrementé el tráfico web en 30% y reduje el porcentaje de rebote en 15% mediante la creación y optimización de landing pages para grandes eventos deportivos, utilizando contenido exclusivo y estrategias de distribución digital.",
-        "Coordiné landing pages, contenidos y programas digitales asociados a Juegos Olímpicos de Tokio 2020, Mundial de Qatar 2022 y Champions League, articulando equipos y contenidos multiplataforma.",
+        "Coordiné landing pages, contenidos y programas digitales asociados a Juegos Olímpicos de Tokio 2020, Mundial de Qatar 2022 y Champions League.",
       ],
     },
     {
@@ -58,7 +57,7 @@ export const SITE_CONTENT: SiteContent = {
       endDate: "Actualidad",
       summary: [
         "Coordiné la producción y publicación de más de 145,000 artículos con el equipo editorial, contribuyendo a un promedio superior a 1 millón de usuarios únicos mensuales en la web de ATV.",
-        "Gestiono contenidos para la plataforma web mediante selección, revisión, organización y preparación de materiales antes de su publicación, coordinando con los equipos involucrados en producción y publicación web.",
+        "Gestiono contenidos para la plataforma web mediante selección, revisión, organización y preparación de materiales antes de su publicación.",
       ],
     },
     {
@@ -67,7 +66,7 @@ export const SITE_CONTENT: SiteContent = {
       startDate: "2018",
       endDate: "2020",
       summary: [
-        "Alcancé picos de 9,000 espectadores con programas digitales como Deportes en la Red en 2018 y creé una comunidad de 15,000 seguidores en cuatro meses para el fanpage del programa, mediante producción de contenidos y estrategia de distribución en redes sociales.",
+        "Alcancé picos de 9,000 espectadores con programas digitales como Deportes en la Red en 2018 y creé una comunidad de 15,000 seguidores en cuatro meses para el fanpage del programa.",
         "Desarrollé programas digitales para redes sociales y web, transformando contenidos televisivos en formatos adaptados al consumo digital.",
       ],
     },
@@ -76,74 +75,54 @@ export const SITE_CONTENT: SiteContent = {
       position: "Community Manager",
       startDate: "2017",
       endDate: "2019",
-      summary: [
-        "Gestioné las redes sociales de ATV y ATV+ mediante planificación, publicación y seguimiento de contenidos, adaptando formatos, mensajes y calendarios a cada plataforma.",
-        "Optimicé la presencia digital de las marcas mediante seguimiento de métricas de audiencia, interacción y rendimiento de contenidos.",
-      ],
+      summary: "Gestioné las redes sociales de ATV y ATV+ mediante planificación, publicación y seguimiento de contenidos, adaptando formatos y mensajes a cada plataforma.",
     },
     {
       company: "Grupo ATV",
       position: "Redactor Creativo",
       startDate: "2016",
       endDate: "2017",
-      summary: [
-        "Desarrollé contenidos editoriales para la web de ATV mediante investigación, redacción y adaptación de información para consumo digital.",
-        "Adapté contenidos a formatos web mediante criterios de redacción digital orientados a relevancia, claridad y experiencia del usuario.",
-      ],
+      summary: "Desarrollé contenidos editoriales para la web de ATV mediante investigación, redacción y adaptación de información para consumo digital.",
     },
     {
       company: "Zebra 3 Producciones",
       position: "Editor de Videos",
       startDate: "2015",
       endDate: "2016",
-      summary: [
-        "Produje piezas audiovisuales mediante edición de material de casting y contenidos realizados por actores.",
-        "Optimicé materiales audiovisuales para su entrega final mediante procesos de edición y postproducción.",
-      ],
+      summary: "Produje y optimicé piezas audiovisuales mediante procesos de edición y postproducción.",
     },
   ],
   projects: [
     {
       name: "CICAJ — Estrategia de crecimiento digital",
-      summary:
-        "Estrategia de contenidos, Social Media y Meta Ads para comunicación académica e institucional dirigida a audiencias de posgrado.",
-      linkPreview: "/",
+      summary: "Estrategia de contenidos, Social Media y Meta Ads para comunicación académica e institucional dirigida a audiencias de posgrado.",
       linkSource: "https://www.pucp.edu.pe/cicaj/",
-      image: "/project-cicaj.png",
+      image: "/project-cicaj.svg",
     },
     {
       name: "ATV — Sports Media",
-      summary:
-        "Experiencias digitales y contenidos multiplataforma para grandes eventos deportivos como Tokio 2020, Qatar 2022 y Champions League.",
-      linkPreview: "/",
+      summary: "Experiencias digitales y contenidos multiplataforma para grandes eventos deportivos como Tokio 2020, Qatar 2022 y Champions League.",
       linkSource: "https://www.atv.pe/",
-      image: "/project-atv-sports.png",
+      image: "/project-atv-sports.svg",
     },
     {
       name: "ATV — Web & Content",
-      summary:
-        "Gestión editorial y producción de contenido digital a escala para la plataforma web de ATV.",
-      linkPreview: "/",
+      summary: "Gestión editorial y producción de contenido digital a escala para la plataforma web de ATV.",
       linkSource: "https://www.atv.pe/",
-      image: "/project-atv-web.png",
+      image: "/project-atv-web.svg",
     },
     {
       name: "Deportes en la Red",
-      summary:
-        "Producción de programas digitales y estrategia de distribución para construir audiencias deportivas en plataformas digitales.",
-      linkPreview: "/",
+      summary: "Producción de programas digitales y estrategia de distribución para construir audiencias deportivas en plataformas digitales.",
       linkSource: "https://www.atv.pe/",
-      image: "/project-deportes.png",
+      image: "/project-deportes.svg",
     },
   ],
   about: {
-    description: `
-      Soy José Gerardo Ferreccio Riega, profesional de Marketing, Comunicación y Medios Digitales con experiencia en medios de comunicación y sector académico.
+    description: `Soy José Gerardo Ferreccio Riega, profesional de Marketing, Comunicación y Medios Digitales con experiencia en medios de comunicación y sector académico.
 
-      Mi experiencia combina estrategia digital, contenidos, SEO, Social Media, Performance Marketing, analítica y comunicación institucional. He trabajado en proyectos digitales y multiplataforma, coordinando equipos y transformando objetivos de comunicación y negocio en acciones orientadas a resultados.
+Mi experiencia combina estrategia digital, contenidos, SEO, Social Media, Performance Marketing, analítica y comunicación institucional. He trabajado en proyectos digitales y multiplataforma, coordinando equipos y transformando objetivos de comunicación y negocio en acciones orientadas a resultados.
 
-      Me interesa desarrollar proyectos donde estrategia, contenido y datos trabajen juntos para construir audiencias, mejorar el rendimiento digital y generar impacto.
-    `,
-    image: "/jose-ferreccio-large.jpg",
+Me interesa desarrollar proyectos donde estrategia, contenido y datos trabajen juntos para construir audiencias, mejorar el rendimiento digital y generar impacto.`,
   },
 };
