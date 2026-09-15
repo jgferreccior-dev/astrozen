@@ -94,24 +94,28 @@ export const SITE_CONTENT: SiteContent = {
     {
       name: "CICAJ — Estrategia de crecimiento digital",
       summary: "Estrategia de contenidos, Social Media y Meta Ads para comunicación académica e institucional dirigida a audiencias de posgrado.",
+      linkPreview: "/proyectos/cicaj",
       linkSource: "https://www.pucp.edu.pe/cicaj/",
       image: "/project-cicaj.svg",
     },
     {
       name: "ATV — Sports Media",
       summary: "Experiencias digitales y contenidos multiplataforma para grandes eventos deportivos como Tokio 2020, Qatar 2022 y Champions League.",
+      linkPreview: "/proyectos/atv-sports",
       linkSource: "https://www.atv.pe/",
       image: "/project-atv-sports.svg",
     },
     {
       name: "ATV — Web & Content",
       summary: "Gestión editorial y producción de contenido digital a escala para la plataforma web de ATV.",
+      linkPreview: "/proyectos/atv-web",
       linkSource: "https://www.atv.pe/",
       image: "/project-atv-web.svg",
     },
     {
       name: "Deportes en la Red",
       summary: "Producción de programas digitales y estrategia de distribución para construir audiencias deportivas en plataformas digitales.",
+      linkPreview: "/proyectos/deportes-en-la-red",
       linkSource: "https://www.atv.pe/",
       image: "/project-deportes.svg",
     },
