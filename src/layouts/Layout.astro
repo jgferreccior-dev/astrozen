@@ -25,6 +25,17 @@ const { title = siteTitle, description = siteDescription } = Astro.props;
 const canonicalBase = canonicalURL ?? "https://astrozen-josefr-89-9123.vercel.app/";
 const resolvedCanonical = new URL(Astro.url.pathname, canonicalBase).href;
 const ogImgUrl = new URL(socialImage, canonicalBase).href;
+const profileSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Person",
+    "name": author,
+    "jobTitle": "Digital Media & SEO Specialist",
+    "description": description,
+    "sameAs": socialLinks.map((link) => link.href),
+  },
+};
 ---
 
 <!doctype html>
@@ -43,6 +54,7 @@ const ogImgUrl = new URL(socialImage, canonicalBase).href;
     <Font cssVariable="--font-gabarito" preload />
     <Font cssVariable="--font-be-vietnam-pro" preload />
 
+    <script type="application/ld+json" set:html={JSON.stringify(profileSchema)}></script>
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_PE" />
     <meta property="og:title" content={title} />
