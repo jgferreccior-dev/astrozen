@@ -19,7 +19,7 @@ export const SITE_CONFIG: SiteConfig = {
     { text: "GitHub", href: "https://github.com/jgferreccior-dev" },
   ],
   socialImage: "/zen-og.png",
-  canonicalURL: "https://joseferreccio-digital.vercel.app/",
+  canonicalURL: "https://joseferreccio-digital-1to6slsu0-josefr-89-9123.vercel.app/",
 };
 
 export const SITE_CONTENT: SiteContent = {
@@ -102,9 +102,9 @@ export const SITE_CONTENT: SiteContent = {
       image: "/project-cicaj.svg",
     },
     {
-      name: "ATV — Sports Media",
+      name: "ATV Deportes",
       summary: "Experiencias digitales y contenidos multiplataforma para grandes eventos deportivos como Tokio 2020, Qatar 2022 y Champions League.",
-      linkPreview: "/proyectos/atv-sports",
+      linkPreview: "/proyectos/atv-deportes",
       linkSource: "https://www.atv.pe/",
       image: "/project-atv-sports.svg",
     },
