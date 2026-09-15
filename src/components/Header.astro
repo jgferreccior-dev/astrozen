@@ -1,25 +1,17 @@
 ---
 import Menu from "@icons/Menu.astro";
-import { Image } from "astro:assets";
 import type { HeaderProps } from "@types";
 
 type Props = HeaderProps;
 
-const { siteLogo, navLinks } = Astro.props;
+const { navLinks } = Astro.props;
 ---
 
 <header
-  class="sticky top-0 z-50 mx-auto flex max-w-5xl animate-slide-in justify-between bg-black px-5 py-6"
+  class="sticky top-0 z-50 mx-auto flex max-w-5xl animate-slide-in items-center justify-between bg-black px-5 py-6"
 >
-  <a href="/" aria-label="Home link">
-    <Image
-      class="rounded-full"
-      src={siteLogo}
-      width="45"
-      height="45"
-      alt="website logo"
-      priority
-    />
+  <a href="/" aria-label="José Ferreccio — Inicio" class="font-serif text-xl font-bold tracking-tight text-white">
+    JF<span class="text-primary">.</span>
   </a>
 
   <button
@@ -28,6 +20,7 @@ const { siteLogo, navLinks } = Astro.props;
     class="px-1.5 text-neutral sm:hidden"
     aria-expanded="false"
     aria-controls="main-menu"
+    aria-label="Abrir menú"
   >
     <Menu />
   </button>
@@ -41,7 +34,7 @@ const { siteLogo, navLinks } = Astro.props;
         navLinks.map((link) => (
           <li class="relative">
             <a
-              class={`nav-item relative block p-2 text-sm font-medium transition-all duration-500 after:absolute after:bottom-0 after:left-2/4 after:h-2 after:w-1 after:-translate-x-2/4 after:text-primary after:opacity-0 after:content-['•'] hover:text-white`}
+              class="nav-item relative block p-2 text-sm font-medium transition-all duration-500 after:absolute after:bottom-0 after:left-2/4 after:h-2 after:w-1 after:-translate-x-2/4 after:text-primary after:opacity-0 after:content-['•'] hover:text-white"
               href={link.href}
             >
               {link.text}
@@ -54,7 +47,6 @@ const { siteLogo, navLinks } = Astro.props;
 </header>
 
 <script>
-  // Toggle mobile menu
   const button = document.querySelector("#menu-button");
   const menu = document.querySelector("#main-menu");
   const navItems = document.querySelectorAll("#main-menu > ul > li > a");
@@ -66,11 +58,8 @@ const { siteLogo, navLinks } = Astro.props;
   };
 
   button?.addEventListener("click", toggleMenu);
-  navItems.forEach((item) => {
-    item?.addEventListener("click", toggleMenu);
-  });
+  navItems.forEach((item) => item?.addEventListener("click", toggleMenu));
 
-  // Update navigation based on scroll position with Intersection Observer
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -88,20 +77,7 @@ const { siteLogo, navLinks } = Astro.props;
     { threshold: 0.5 },
   );
 
-  document.querySelectorAll("section").forEach((section) => {
-    observer.observe(section);
-  });
-
-  // Cleanup observer
-  document.onvisibilitychange = () => {
-    if (document.visibilityState === "hidden") {
-      observer.disconnect();
-    } else {
-      document.querySelectorAll("section").forEach((section) => {
-        observer.observe(section);
-      });
-    }
-  };
+  document.querySelectorAll("section").forEach((section) => observer.observe(section));
 </script>
 
 <style>
