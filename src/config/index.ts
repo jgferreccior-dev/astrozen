@@ -1,23 +1,20 @@
 import type { SiteConfig, SiteContent } from "../types";
 
 export const SITE_CONFIG: SiteConfig = {
-  title: "Alejandro Múnez — Mobile & Web Developer",
-  author: "Alejandro Múnez Cuntez",
+  title: "José Gerardo Ferreccio Riega — Digital Media & SEO Specialist",
+  author: "José Gerardo Ferreccio Riega",
   description:
-    "Software Engineer based in San Francisco, USA. I specialize in UI design, web and mobile application development and maintenance.",
-  lang: "en",
-  siteLogo: "/alejandro-small.jpg",
+    "Portfolio profesional de José Gerardo Ferreccio Riega, Digital Media & SEO Specialist especializado en estrategia digital, SEO, contenidos, Social Media, Performance Marketing y analítica.",
+  lang: "es",
+  siteLogo: "/jose-ferreccio.jpg",
   navLinks: [
-    { text: "Experience", href: "#experience" },
-    { text: "Projects", href: "#projects" },
-    { text: "About", href: "#about" },
+    { text: "Proyectos", href: "#projects" },
+    { text: "Experiencia", href: "#experience" },
+    { text: "Sobre mí", href: "#about" },
   ],
   socialLinks: [
-    { text: "Twitter", href: "https://github.com/immois/astro-zen" },
-    { text: "LinkedIn", href: "https://github.com/immois/astro-zen" },
-    { text: "Github", href: "https://github.com/immois/astro-zen" },
-    { text: "Youtube", href: "https://github.com/immois/astro-zen" },
-    { text: "Dribbble", href: "https://github.com/immois/astro-zen" },
+    { text: "LinkedIn", href: "https://www.linkedin.com/in/jose-ferreccio-4211901b5/" },
+    { text: "GitHub", href: "https://github.com/jgferreccior-dev" },
   ],
   socialImage: "/zen-og.png",
   canonicalURL: "https://astro-zen.vercel.app",
@@ -25,74 +22,128 @@ export const SITE_CONFIG: SiteConfig = {
 
 export const SITE_CONTENT: SiteContent = {
   hero: {
-    name: "Alejandro Múnez",
-    specialty: "Mobile & Web Developer",
+    name: "José Gerardo Ferreccio Riega",
+    specialty: "Digital Media & SEO Specialist",
     summary:
-      "Developer based in San Francisco, USA. I specialize in UI design, web and mobile application development and maintenance.",
-    email: "example@email.com",
+      "Profesional de Marketing, Comunicación y Medios Digitales especializado en estrategia digital, SEO, Social Media, Content Strategy, Performance Marketing y analítica.",
+    email: "jgferreccior@gmail.com",
   },
   experience: [
     {
-      company: "Zalmart",
-      position: "Lead Android Developer",
-      startDate: "May 2018",
-      endDate: "Sept 2020",
+      company: "CICAJ — Pontificia Universidad Católica del Perú (PUCP)",
+      position: "Community Manager",
+      startDate: "Enero 2022",
+      endDate: "Actualidad",
       summary: [
-        "Implemented advanced memory management and code optimization techniques, resulting in a reduction in application load time by 40% and a decrease in crashes by 25%. This significantly improved user experience and increased user retention by 20%.",
-        "I led a team of developers in building and integrating new features using Jetpack Android components such as LiveData and ViewModel. This enabled us to build scalable and maintainable applications, reducing the crash rate by 20% and speeding up the time to delivery of new features by 15%.",
-        "Integrated Google Pay for in-app purchases, resulting in a 35% increase in mobile transaction revenue. Additionally, implemented Firebase Analytics to gain insights into user behavior, enabling data-driven optimizations and a 30% increase in user retention.",
+        "Incrementé el alcance de la comunidad digital en 275% y las visualizaciones de contenido en 448% en un trimestre, mediante calendarios editoriales, segmentación de audiencias y pauta digital en Meta Ads.",
+        "Elevé los clics hacia inscripciones y contenidos académicos en 802% y alcancé 3.1% de engagement, mediante estrategias de Content Strategy adaptadas a audiencias de posgrado en Facebook e Instagram.",
+        "Gestiono la comunicación digital del CICAJ, subunidad del Departamento Académico de Derecho de la PUCP, mediante planificación, producción y publicación de contenidos académicos, institucionales y de investigación.",
+        "Coordino con docentes, investigadores y equipos académicos para transformar información jurídica especializada en contenidos claros y atractivos, alineados con objetivos de comunicación y captación.",
       ],
     },
     {
-      company: "Bankit",
-      position: "Mobile Developer",
-      startDate: "Feb 2017",
-      endDate: "May 2018",
+      company: "Grupo ATV",
+      position: "Líder de Contenido Deportivo",
+      startDate: "2020",
+      endDate: "Actualidad",
       summary: [
-        "I designed and developed a mobile application using Flutter, allowing it to be deployed on both Android and iOS with a single codebase. This reduced development time by 50% and maintenance costs by 30%, facilitating a consistent user experience on both platforms.",
-        "I integrated biometric authentication and data encryption, significantly improving the security of user data. This implementation resulted in a 40% increase in user trust and a 25% reduction in unauthorized access attempts.",
+        "Incrementé el tráfico web en 30% y reduje el porcentaje de rebote en 15% mediante la creación y optimización de landing pages para grandes eventos deportivos, utilizando contenido exclusivo y estrategias de distribución digital.",
+        "Coordiné landing pages, contenidos y programas digitales asociados a Juegos Olímpicos de Tokio 2020, Mundial de Qatar 2022 y Champions League, articulando equipos y contenidos multiplataforma.",
       ],
     },
     {
-      company: "Driveer",
-      position: "Frontend Developer",
-      startDate: "Jun 2015",
-      endDate: "Oct 2016",
-      summary:
-        "Developed and integrated a real-time vehicle tracking system using WebSockets, improving accuracy and data update in the application. This functionality increased user satisfaction by 30% and reduced customer service inquiries by 25%.",
+      company: "Grupo ATV",
+      position: "Editor de Contenido Web",
+      startDate: "2021",
+      endDate: "Actualidad",
+      summary: [
+        "Coordiné la producción y publicación de más de 145,000 artículos con el equipo editorial, contribuyendo a un promedio superior a 1 millón de usuarios únicos mensuales en la web de ATV.",
+        "Gestiono contenidos para la plataforma web mediante selección, revisión, organización y preparación de materiales antes de su publicación, coordinando con los equipos involucrados en producción y publicación web.",
+      ],
+    },
+    {
+      company: "Grupo ATV",
+      position: "Productor de Programas Digitales",
+      startDate: "2018",
+      endDate: "2020",
+      summary: [
+        "Alcancé picos de 9,000 espectadores con programas digitales como Deportes en la Red en 2018 y creé una comunidad de 15,000 seguidores en cuatro meses para el fanpage del programa, mediante producción de contenidos y estrategia de distribución en redes sociales.",
+        "Desarrollé programas digitales para redes sociales y web, transformando contenidos televisivos en formatos adaptados al consumo digital.",
+      ],
+    },
+    {
+      company: "Grupo ATV",
+      position: "Community Manager",
+      startDate: "2017",
+      endDate: "2019",
+      summary: [
+        "Gestioné las redes sociales de ATV y ATV+ mediante planificación, publicación y seguimiento de contenidos, adaptando formatos, mensajes y calendarios a cada plataforma.",
+        "Optimicé la presencia digital de las marcas mediante seguimiento de métricas de audiencia, interacción y rendimiento de contenidos.",
+      ],
+    },
+    {
+      company: "Grupo ATV",
+      position: "Redactor Creativo",
+      startDate: "2016",
+      endDate: "2017",
+      summary: [
+        "Desarrollé contenidos editoriales para la web de ATV mediante investigación, redacción y adaptación de información para consumo digital.",
+        "Adapté contenidos a formatos web mediante criterios de redacción digital orientados a relevancia, claridad y experiencia del usuario.",
+      ],
+    },
+    {
+      company: "Zebra 3 Producciones",
+      position: "Editor de Videos",
+      startDate: "2015",
+      endDate: "2016",
+      summary: [
+        "Produje piezas audiovisuales mediante edición de material de casting y contenidos realizados por actores.",
+        "Optimicé materiales audiovisuales para su entrega final mediante procesos de edición y postproducción.",
+      ],
     },
   ],
   projects: [
     {
-      name: "Spotifu Music",
-      summary: "A music streaming app that emulates Spotify's core features.",
+      name: "CICAJ — Estrategia de crecimiento digital",
+      summary:
+        "Estrategia de contenidos, Social Media y Meta Ads para comunicación académica e institucional dirigida a audiencias de posgrado.",
       linkPreview: "/",
-      linkSource: "https://github.com/immois/astro-zen",
-      image: "/spotifu.png",
+      linkSource: "https://www.pucp.edu.pe/cicaj/",
+      image: "/project-cicaj.png",
     },
     {
-      name: "Shopp App",
-      summary: "An e-commerce platform that replicates Shopify's key features.",
+      name: "ATV — Sports Media",
+      summary:
+        "Experiencias digitales y contenidos multiplataforma para grandes eventos deportivos como Tokio 2020, Qatar 2022 y Champions League.",
       linkPreview: "/",
-      linkSource: "https://github.com/immois/astro-zen",
-      image: "/shopify-clon.png",
+      linkSource: "https://www.atv.pe/",
+      image: "/project-atv-sports.png",
     },
     {
-      name: "ClonTagram",
-      summary: "A social network that replicates the features of Instagram",
+      name: "ATV — Web & Content",
+      summary:
+        "Gestión editorial y producción de contenido digital a escala para la plataforma web de ATV.",
       linkPreview: "/",
-      linkSource: "https://github.com/immois/astro-zen",
-      image: "/clone-ig.png",
+      linkSource: "https://www.atv.pe/",
+      image: "/project-atv-web.png",
+    },
+    {
+      name: "Deportes en la Red",
+      summary:
+        "Producción de programas digitales y estrategia de distribución para construir audiencias deportivas en plataformas digitales.",
+      linkPreview: "/",
+      linkSource: "https://www.atv.pe/",
+      image: "/project-deportes.png",
     },
   ],
   about: {
     description: `
-      Hi, I’m Alejandro Múnez, a passionate Mobile and Web Developer with a knack for crafting seamless digital experiences. With a strong background in both Android and iOS development, as well as front-end web technologies, I thrive in the intersection where creativity meets technology.
+      Soy José Gerardo Ferreccio Riega, profesional de Marketing, Comunicación y Medios Digitales con experiencia en medios de comunicación y sector académico.
 
-      Over the years, I’ve honed my skills in building robust, user-friendly applications that not only meet the needs of users but also push the boundaries of what’s possible. My projects range from innovative mobile applications to responsive web designs, all with a focus on performance, security, and scalability.
+      Mi experiencia combina estrategia digital, contenidos, SEO, Social Media, Performance Marketing, analítica y comunicación institucional. He trabajado en proyectos digitales y multiplataforma, coordinando equipos y transformando objetivos de comunicación y negocio en acciones orientadas a resultados.
+
+      Me interesa desarrollar proyectos donde estrategia, contenido y datos trabajen juntos para construir audiencias, mejorar el rendimiento digital y generar impacto.
     `,
-    image: "/alejandro-big.jpg",
+    image: "/jose-ferreccio-large.jpg",
   },
 };
-
-// #5755ff
