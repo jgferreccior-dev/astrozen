@@ -16,7 +16,7 @@ const {
   canonicalURL,
 } = SITE_CONFIG;
 
-const resolvedCanonical = canonicalURL ?? Astro.url.href;
+const resolvedCanonical = canonicalURL ?? "https://astrozen-git-main-josefr-89-9123.vercel.app/";
 const ogImgUrl = new URL(socialImage, resolvedCanonical).href;
 ---
 
