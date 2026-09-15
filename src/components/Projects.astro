@@ -1,6 +1,5 @@
 ---
 import Section from "./Section.astro";
-import { Image } from "astro:assets";
 import type { ProjectProps } from "@types";
 
 interface Props {
@@ -8,52 +7,54 @@ interface Props {
 }
 
 const { projects } = Astro.props;
+const backgrounds = [
+  "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=1200&q=80",
+];
 ---
 
 <Section text="Proyectos destacados" href="projects">
-  <p class="mb-12 max-w-2xl text-base leading-7 text-neutral md:text-lg">
-    Casos donde estrategia, contenido, distribución y datos se combinan para construir audiencias y mejorar resultados digitales.
-  </p>
-  {
-    projects.map(({ name, summary, image, linkPreview, linkSource }, index) => {
-      const top = 98 + index * 40;
-      return (
-        <div
-          style={`top: ${top}px;`}
-          class="sticky mb-12 rounded-2xl border border-neutral/20 bg-black"
-        >
-          <div class="relative z-1 grid h-145 w-full grid-rows-2 overflow-hidden rounded-2xl bg-[#151b24] sm:grid-cols-2 sm:grid-rows-1 md:h-96">
-            <div class="px-6 pt-12 sm:px-10">
-              <p class="mb-4 text-xs font-medium uppercase tracking-[0.18em] text-neutral">
-                Caso de estudio
-              </p>
-              <h3 class="mb-5 font-serif text-3xl font-medium text-primary">
-                {name}
-              </h3>
-              <p class="max-w-lg text-base leading-7 text-neutral">{summary}</p>
+  <div class="mb-12 flex items-end justify-between gap-6">
+    <p class="max-w-2xl text-base leading-7 text-neutral md:text-lg">
+      Casos donde estrategia, contenido, distribución y datos se combinan para construir audiencias y mejorar resultados digitales.
+    </p>
+    <span class="hidden text-sm font-medium text-primary md:block">Resultados primero →</span>
+  </div>
+
+  <div class="grid gap-5 md:grid-cols-2">
+    {
+      projects.map(({ name, summary, linkPreview, linkSource }, index) => (
+        <article class="group relative min-h-[340px] overflow-hidden rounded-2xl border border-white/10 bg-[#111820]">
+          <div
+            class="absolute inset-0 bg-cover bg-center transition duration-700 group-hover:scale-105"
+            style={`background-image: url('${backgrounds[index % backgrounds.length]}');`}
+            aria-hidden="true"
+          ></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#05080d] via-[#07101a]/80 to-[#07101a]/25" aria-hidden="true"></div>
+          <div class="relative flex min-h-[340px] flex-col justify-between p-7 md:p-8">
+            <div class="flex items-start justify-between gap-5">
+              <p class="text-xs font-medium uppercase tracking-[0.18em] text-white/60">Caso de estudio</p>
+              <span class="flex h-10 w-10 items-center justify-center rounded-full border border-primary/70 bg-black/30 text-xl text-primary backdrop-blur-sm transition-transform group-hover:-translate-y-1 group-hover:translate-x-1">↗</span>
+            </div>
+            <div>
+              <h3 class="mb-3 font-serif text-3xl font-semibold tracking-tight text-white">{name}</h3>
+              <p class="max-w-xl text-sm leading-6 text-white/70">{summary}</p>
               {(linkPreview || linkSource) && (
                 <a
                   href={linkPreview || linkSource}
                   target={linkPreview ? undefined : "_blank"}
                   rel={linkPreview ? undefined : "noreferrer"}
-                  class="mt-8 inline-block text-sm font-medium text-white hover:underline"
+                  class="mt-6 inline-block text-sm font-semibold text-primary hover:text-white"
                 >
-                  {linkPreview ? "Ver caso de estudio →" : "Ver referencia ↗"}
+                  Ver caso de estudio →
                 </a>
               )}
             </div>
-            <div class="flex items-end justify-end overflow-hidden">
-              <Image
-                class="h-full w-full object-cover"
-                src={image}
-                alt={name}
-                width="736"
-                height="483"
-              />
-            </div>
           </div>
-        </div>
-      );
-    })
-  }
+        </article>
+      ))
+    }
+  </div>
 </Section>
