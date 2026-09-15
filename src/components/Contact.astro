@@ -1,0 +1,29 @@
+---
+import Section from "./Section.astro";
+
+interface Props {
+  email: string;
+}
+
+const { email } = Astro.props;
+---
+
+<Section text="Contacto" href="contact">
+  <div class="grid gap-10 md:grid-cols-[1fr_auto] md:items-end">
+    <div class="max-w-3xl">
+      <p class="mb-5 font-serif text-4xl font-semibold leading-tight text-white md:text-6xl">
+        ¿Trabajamos juntos?
+      </p>
+      <p class="max-w-2xl text-base leading-8 text-neutral md:text-lg">
+        Estoy interesado en proyectos de estrategia digital, contenidos, SEO, Social Media,
+        Performance Marketing y comunicación digital orientados a resultados.
+      </p>
+    </div>
+    <a
+      href={`mailto:${email}`}
+      class="inline-block w-fit rounded-full bg-primary px-8 py-4 text-sm font-medium text-white transition-opacity hover:opacity-85"
+    >
+      {email}
+    </a>
+  </div>
+</Section>
