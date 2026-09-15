@@ -5,57 +5,63 @@ type Props = HeroProps;
 const { name, specialty, summary, email } = Astro.props;
 ---
 
-<section class="relative isolate -mx-5 overflow-hidden border-b border-white/10 px-5 py-20 md:py-28" id="hero">
+<section class="relative isolate -mx-5 overflow-hidden border-b border-white/10 px-5 pb-20 pt-0 md:pb-28" id="hero">
+  <div class="absolute left-0 right-0 top-0 h-28 border-b border-white/10 bg-[#3f454d]" aria-hidden="true"></div>
   <div
-    class="absolute inset-0 -z-20 bg-cover bg-center"
-    style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=2200&q=85');"
+    class="absolute inset-x-0 bottom-0 top-28 -z-20 bg-cover bg-center"
+    style="background-image: url('/hero-growth.svg');"
     aria-hidden="true"
   ></div>
-  <div class="absolute inset-0 -z-10 bg-gradient-to-r from-[#05080d] via-[#07101a]/95 to-[#07101a]/55" aria-hidden="true"></div>
-  <div class="absolute inset-0 -z-10 bg-gradient-to-t from-[#0e141b] via-transparent to-[#05080d]/35" aria-hidden="true"></div>
+  <div class="absolute inset-x-0 bottom-0 top-28 -z-10 bg-gradient-to-r from-[#05080d] via-[#07101a]/90 to-[#07101a]/58" aria-hidden="true"></div>
+  <div class="absolute inset-x-0 bottom-0 top-28 -z-10 bg-gradient-to-t from-[#05080d] via-[#05080d]/55 to-transparent" aria-hidden="true"></div>
 
   <div class="mx-auto max-w-5xl">
-    <div class="mb-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs font-medium uppercase tracking-[0.2em] text-white/55">
-      <span>{name}</span>
-      <span class="text-primary">·</span>
-      <span>{specialty}</span>
-    </div>
-    <p class="mb-6 text-sm font-medium uppercase tracking-[0.24em] text-white/65">
-      Estrategia · Contenido · Audiencia · Resultados
-    </p>
-    <h1 class="mb-3 max-w-4xl font-serif text-5xl font-bold leading-[0.95] tracking-tightest text-white sm:text-6xl md:text-8xl">
-      Digital Media <span class="text-primary">&</span><br />
-      <span class="text-primary">SEO</span> Specialist
-    </h1>
-    <p class="mb-9 max-w-2xl text-base leading-7 text-white/75 md:text-lg">
-      {summary} Conecto contenidos, audiencias y datos para transformar objetivos digitales en resultados medibles.
-    </p>
-
-    <div class="mb-12 flex flex-wrap gap-3">
-      <a class="rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5" href="#projects">
-        Ver proyectos →
-      </a>
-      <a class="rounded-full border border-white/25 bg-black/20 px-7 py-3.5 text-sm font-medium text-white backdrop-blur-sm transition-colors hover:border-white/50" href={`mailto:${email}`}>
-        Hablemos
-      </a>
+    <div class="flex min-h-28 items-end pb-5 pt-6 md:pb-6">
+      <p class="text-xs font-semibold uppercase tracking-[0.2em] text-white/75 sm:text-sm">
+        {name}
+        <span class="mx-2 text-primary">·</span>
+        {specialty}
+      </p>
     </div>
 
-    <div class="grid max-w-4xl grid-cols-2 border-y border-white/15 py-7 sm:grid-cols-4">
-      <div class="border-r border-white/15 px-4 first:pl-0 sm:px-5">
-        <p class="font-serif text-3xl font-bold text-white md:text-4xl">+275%</p>
-        <p class="mt-1 text-xs text-white/60 md:text-sm">alcance en RR.SS.</p>
+    <div class="pt-12 md:pt-16">
+      <p class="mb-6 text-sm font-medium uppercase tracking-[0.24em] text-white/65">
+        Estrategia · Contenido · Audiencia · Resultados
+      </p>
+      <h1 class="mb-3 max-w-4xl font-serif text-5xl font-bold leading-[0.95] tracking-tightest text-white sm:text-6xl md:text-8xl">
+        Digital Media <span class="text-primary">&</span><br />
+        <span class="text-primary">SEO</span> Specialist
+      </h1>
+      <p class="mb-9 max-w-2xl text-base leading-7 text-white/75 md:text-lg">
+        {summary} Conecto contenidos, audiencias y datos para transformar objetivos digitales en resultados medibles.
+      </p>
+
+      <div class="mb-12 flex flex-wrap gap-3">
+        <a class="rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-[#05080d]" href="#projects">
+          Ver proyectos →
+        </a>
+        <a class="rounded-full border border-white/25 bg-black/20 px-7 py-3.5 text-sm font-medium text-white backdrop-blur-sm transition-colors hover:border-white/50 focus:outline-none focus:ring-2 focus:ring-white/60" href={`mailto:${email}`}>
+          Hablemos
+        </a>
       </div>
-      <div class="border-r border-white/15 px-4 sm:px-5">
-        <p class="font-serif text-3xl font-bold text-white md:text-4xl">+802%</p>
-        <p class="mt-1 text-xs text-white/60 md:text-sm">clics hacia contenidos</p>
-      </div>
-      <div class="border-r border-white/15 px-4 sm:px-5">
-        <p class="font-serif text-3xl font-bold text-white md:text-4xl">+30%</p>
-        <p class="mt-1 text-xs text-white/60 md:text-sm">tráfico web</p>
-      </div>
-      <div class="px-4 sm:px-5 sm:pr-0">
-        <p class="font-serif text-3xl font-bold text-white md:text-4xl">145K+</p>
-        <p class="mt-1 text-xs text-white/60 md:text-sm">artículos gestionados</p>
+
+      <div class="grid max-w-4xl grid-cols-2 border-y border-white/15 py-7 sm:grid-cols-4">
+        <div class="border-r border-white/15 px-4 first:pl-0 sm:px-5">
+          <p class="font-serif text-3xl font-bold text-white md:text-4xl">+275%</p>
+          <p class="mt-1 text-xs text-white/60 md:text-sm">alcance en RR.SS.</p>
+        </div>
+        <div class="border-r border-white/15 px-4 sm:px-5">
+          <p class="font-serif text-3xl font-bold text-white md:text-4xl">+802%</p>
+          <p class="mt-1 text-xs text-white/60 md:text-sm">clics hacia contenidos</p>
+        </div>
+        <div class="border-r border-white/15 px-4 sm:px-5">
+          <p class="font-serif text-3xl font-bold text-white md:text-4xl">+30%</p>
+          <p class="mt-1 text-xs text-white/60 md:text-sm">tráfico web</p>
+        </div>
+        <div class="px-4 sm:px-5 sm:pr-0">
+          <p class="font-serif text-3xl font-bold text-white md:text-4xl">145K+</p>
+          <p class="mt-1 text-xs text-white/60 md:text-sm">artículos gestionados</p>
+        </div>
       </div>
     </div>
   </div>
