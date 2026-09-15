@@ -1,37 +1,36 @@
 ---
 import Section from "./Section.astro";
 
-const skillGroups = [
-  {
-    title: "Estrategia & Marketing Digital",
-    skills: ["Estrategia Digital", "Content Strategy", "Content Marketing", "Performance Marketing", "Meta Ads"],
-  },
-  {
-    title: "SEO & Analítica",
-    skills: ["SEO", "Google Analytics", "Google Search Console", "KPI & Reporting", "Segmentación de audiencias"],
-  },
-  {
-    title: "Social Media & Contenidos",
-    skills: ["Social Media Management", "Community Management", "Copywriting", "WordPress", "TikTok Business"],
-  },
-  {
-    title: "Producción & Herramientas",
-    skills: ["Hootsuite", "Canva", "Adobe Photoshop", "Adobe Premiere", "Adobe Audition", "Microsoft Excel", "Google Sheets"],
-  },
+const skills = [
+  ["◎", "Estrategia", "Digital"],
+  ["⌁", "SEO", ""],
+  ["▤", "Content", "Strategy"],
+  ["◒", "Performance", "Marketing"],
+  ["∞", "Meta Ads", ""],
+  ["◫", "Analytics", ""],
+  ["⌕", "Search", "Console"],
+  ["◉", "Social", "Media"],
+  ["W", "WordPress", ""],
+  ["◌", "Hootsuite", ""],
+  ["C", "Canva", ""],
+  ["A", "Adobe", ""],
+  ["♪", "TikTok", "Business"],
+  ["▦", "Excel /", "Sheets"],
 ];
 ---
 
 <Section text="Skills & Tools" href="skills">
-  <div class="grid gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 md:grid-cols-2">
-    {skillGroups.map((group) => (
-      <article class="bg-black p-7 md:p-9">
-        <h3 class="font-serif text-2xl font-semibold text-white">{group.title}</h3>
-        <div class="mt-6 flex flex-wrap gap-2">
-          {group.skills.map((skill) => (
-            <span class="rounded-full border border-white/10 px-3 py-2 text-sm text-neutral">{skill}</span>
-          ))}
+  <div class="rounded-2xl border border-white/10 bg-[#0b1118]/80 p-6 md:p-8">
+    <div class="grid grid-cols-2 gap-y-8 sm:grid-cols-4 md:grid-cols-7">
+      {skills.map(([icon, first, second]) => (
+        <div class="group text-center">
+          <div class="mx-auto flex h-11 w-11 items-center justify-center rounded-xl border border-primary/30 bg-primary/5 font-serif text-xl font-semibold text-primary transition-transform group-hover:-translate-y-1">
+            {icon}
+          </div>
+          <p class="mt-3 text-xs font-medium text-white/80">{first}</p>
+          {second && <p class="text-xs text-white/45">{second}</p>}
         </div>
-      </article>
-    ))}
+      ))}
+    </div>
   </div>
 </Section>
