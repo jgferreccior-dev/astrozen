@@ -12,7 +12,7 @@ export function getStaticPaths() {
 const { caseStudy } = Astro.props;
 ---
 
-<Layout>
+<Layout title={`${caseStudy.title} — José Gerardo Ferreccio Riega`} description={caseStudy.intro}>
   <article class="py-20 md:py-28">
     <a href="/#projects" class="mb-12 inline-block text-sm text-neutral hover:text-white">← Volver a proyectos</a>
 
