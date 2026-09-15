@@ -25,8 +25,8 @@ export const caseStudies = {
       "El trabajo permitió incrementar el alcance, las visualizaciones y los clics hacia contenidos académicos, manteniendo una estrategia de comunicación institucional orientada a resultados.",
     skills: "Content Strategy · Social Media · Meta Ads · Segmentación · Comunicación institucional · Analítica",
   },
-  "atv-sports": {
-    title: "ATV — Sports Media",
+  "atv-deportes": {
+    title: "ATV Deportes",
     eyebrow: "Caso de estudio · Medios digitales",
     intro:
       "Estrategia de contenidos y experiencias digitales para acompañar grandes eventos deportivos y convertir la cobertura en oportunidades de crecimiento para la plataforma web.",
