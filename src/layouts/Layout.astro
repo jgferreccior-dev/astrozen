@@ -25,21 +25,41 @@ const {
 
 const { title = siteTitle, description = siteDescription, profilePage = false } = Astro.props;
 const isHome = Astro.url.pathname === "/";
-const canonicalBase = canonicalURL ?? "https://astrozen-josefr-89-9123.vercel.app/";
+const canonicalBase = canonicalURL ?? "https://joseferreccio-digital-josefr-89-9123.vercel.app/";
 const resolvedCanonical = new URL(Astro.url.pathname, canonicalBase).href;
 const ogImgUrl = new URL(socialImage, canonicalBase).href;
-const profileSchema = {
-  "@context": "https://schema.org",
-  "@type": "ProfilePage",
-  "mainEntity": {
-    "@type": "Person",
-    "name": author,
-    "jobTitle": "Digital Media & SEO Specialist",
-    "description": description,
-    "sameAs": socialLinks.map((link) => link.href),
-  },
+
+const personSchema = {
+  "@type": "Person",
+  "name": author,
+  "jobTitle": "Digital Media & SEO Specialist",
+  "description": siteDescription,
+  "url": canonicalBase,
+  "email": "mailto:jgferreccior@gmail.com",
+  "sameAs": socialLinks.map((link) => link.href),
 };
-const profileSchemaJson = JSON.stringify(profileSchema);
+
+const structuredData = profilePage || isHome
+  ? {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "name": author,
+          "url": canonicalBase,
+          "inLanguage": "es-PE",
+          "description": siteDescription,
+        },
+        {
+          "@type": "ProfilePage",
+          "url": resolvedCanonical,
+          "name": title,
+          "mainEntity": personSchema,
+        },
+      ],
+    }
+  : null;
+const structuredDataJson = structuredData ? JSON.stringify(structuredData) : null;
 ---
 
 <!doctype html>
@@ -48,8 +68,9 @@ const profileSchemaJson = JSON.stringify(profileSchema);
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="author" content={author} />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="viewport" content="width=device-width" />
+    <meta name="theme-color" content="#05080d" />
     <link rel="canonical" href={resolvedCanonical} />
     <link rel="sitemap" href="/sitemap.xml" />
     <link rel="icon" type="image/svg+xml" href={siteLogo} />
@@ -59,9 +80,10 @@ const profileSchemaJson = JSON.stringify(profileSchema);
     <Font cssVariable="--font-gabarito" preload />
     <Font cssVariable="--font-be-vietnam-pro" preload />
 
-    {(profilePage || isHome) && <script type="application/ld+json" is:inline set:html={profileSchemaJson}></script>}
+    {structuredDataJson && <script type="application/ld+json" is:inline set:html={structuredDataJson}></script>}
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_PE" />
+    <meta property="og:site_name" content={author} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={resolvedCanonical} />
