@@ -1,0 +1,162 @@
+---
+import Layout from "@layouts/Layout.astro";
+import "../styles/global.css";
+
+const experience = [
+  {
+    company: "CICAJ — Pontificia Universidad Católica del Perú (PUCP)",
+    role: "Community Manager",
+    dates: "Enero 2022 — Actualidad",
+    bullets: [
+      "Incrementé el alcance de la comunidad digital en 275% y las visualizaciones de contenido en 448% en un trimestre, mediante calendarios editoriales, segmentación de audiencias y pauta digital en Meta Ads.",
+      "Elevé los clics hacia inscripciones y contenidos académicos en 802% y alcancé 3.1% de engagement, mediante estrategias de Content Strategy adaptadas a audiencias de posgrado en Facebook e Instagram.",
+      "Gestiono la comunicación digital del CICAJ, subunidad del Departamento Académico de Derecho de la PUCP, mediante planificación, producción y publicación de contenidos académicos, institucionales y de investigación.",
+    ],
+  },
+  {
+    company: "Grupo ATV",
+    role: "Líder de Contenido Deportivo",
+    dates: "2020 — Actualidad · Rol concurrente",
+    bullets: [
+      "Incrementé el tráfico web en 30% y reduje el porcentaje de rebote en 15% mediante la creación y optimización de landing pages para grandes eventos deportivos, utilizando contenido exclusivo y estrategias de distribución digital.",
+      "Coordiné landing pages, contenidos y programas digitales asociados a Juegos Olímpicos de Tokio 2020, Mundial de Qatar 2022 y Champions League.",
+    ],
+  },
+  {
+    company: "Grupo ATV",
+    role: "Editor de Contenido Web",
+    dates: "2021 — Actualidad · Rol concurrente",
+    bullets: [
+      "Coordiné la producción y publicación de más de 145,000 artículos con el equipo editorial, contribuyendo a un promedio superior a 1 millón de usuarios únicos mensuales en la web de ATV.",
+      "Optimicé el flujo editorial mediante selección, revisión, organización y preparación de contenidos, coordinando con los equipos responsables de producción y publicación.",
+    ],
+  },
+  {
+    company: "Grupo ATV",
+    role: "Productor de Programas Digitales",
+    dates: "2018 — 2020",
+    bullets: [
+      "Alcancé picos de 9,000 espectadores con programas digitales como Deportes en la Red en 2018 y creé una comunidad de 15,000 seguidores en cuatro meses para el fanpage del programa.",
+      "Desarrollé programas digitales para redes sociales y web, transformando contenidos televisivos en formatos adaptados al consumo digital.",
+    ],
+  },
+  {
+    company: "Grupo ATV",
+    role: "Community Manager",
+    dates: "2017 — 2019",
+    bullets: [
+      "Gestioné las redes sociales de ATV y ATV+ mediante planificación, publicación y seguimiento de contenidos, adaptando formatos, mensajes y calendarios a cada plataforma.",
+      "Optimicé la presencia digital de las marcas mediante seguimiento de métricas de audiencia, interacción y rendimiento de contenidos.",
+    ],
+  },
+  {
+    company: "Grupo ATV",
+    role: "Redactor Creativo",
+    dates: "2016 — 2017",
+    bullets: [
+      "Desarrollé contenidos editoriales para la web de ATV mediante investigación, redacción y adaptación de información para consumo digital.",
+      "Adapté contenidos a formatos web mediante criterios de redacción digital orientados a relevancia, claridad y experiencia del usuario.",
+    ],
+  },
+  {
+    company: "Zebra 3 Producciones",
+    role: "Editor de Videos",
+    dates: "2015 — 2016",
+    bullets: [
+      "Produje piezas audiovisuales mediante edición de material de casting y contenidos realizados por actores.",
+      "Optimicé materiales audiovisuales para su entrega final mediante procesos de edición y postproducción.",
+    ],
+  },
+];
+
+const skills = [
+  "Digital Marketing", "Digital Media", "Performance Marketing", "Meta Ads", "Paid Media",
+  "Social Media Management", "Community Management", "Content Strategy", "Content Marketing",
+  "SEO", "Copywriting", "Comunicación Digital", "Comunicación Institucional", "Analítica Digital",
+  "KPI & Reporting", "Campaign Management", "Audience Segmentation", "WordPress", "Producción Audiovisual",
+];
+---
+
+<Layout title="CV — José Gerardo Ferreccio Riega" description="CV profesional de José Gerardo Ferreccio Riega — Digital Media & SEO Specialist.">
+  <section class="py-16 md:py-24 print:py-8">
+    <div class="mb-12 flex flex-col gap-6 border-b border-white/10 pb-10 md:flex-row md:items-end md:justify-between print:mb-8 print:pb-6">
+      <div>
+        <p class="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-primary">Currículum profesional</p>
+        <h1 class="font-serif text-4xl font-bold tracking-tight text-white md:text-6xl">José Gerardo Ferreccio Riega</h1>
+        <p class="mt-3 text-lg font-semibold text-white/75">Digital Media & SEO Specialist</p>
+        <p class="mt-3 text-sm text-white/50">Lima, Perú · 976-669-785 · jgferreccior@gmail.com</p>
+      </div>
+      <div class="flex gap-3 print:hidden">
+        <button onclick="window.print()" class="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5">Guardar / imprimir PDF</button>
+        <a href="/" class="rounded-full border border-white/20 px-6 py-3 text-sm font-medium text-white hover:border-white/50">Volver al portafolio</a>
+      </div>
+    </div>
+
+    <div class="grid gap-12 md:grid-cols-[1fr_280px]">
+      <div>
+        <section class="mb-12">
+          <h2 class="mb-5 font-serif text-2xl font-bold text-white">Perfil profesional</h2>
+          <p class="max-w-3xl text-base leading-8 text-neutral">Profesional de Marketing, Comunicación y Medios Digitales con experiencia en medios de comunicación y sector académico. Especializado en Digital Marketing, Social Media, Content Strategy, SEO, Meta Ads, analítica digital, comunicación institucional y producción de contenidos. Experiencia gestionando proyectos digitales, campañas y contenidos multiplataforma, coordinando equipos y convirtiendo objetivos de comunicación y negocio en resultados medibles.</p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="mb-7 font-serif text-2xl font-bold text-white">Experiencia profesional</h2>
+          <div class="space-y-9">
+            {experience.map((item) => (
+              <article class="border-l border-white/10 pl-6">
+                <p class="text-xs font-semibold uppercase tracking-[0.15em] text-primary">{item.company}</p>
+                <div class="mt-2 flex flex-col gap-1 md:flex-row md:items-baseline md:justify-between">
+                  <h3 class="font-serif text-xl font-semibold text-white">{item.role}</h3>
+                  <span class="text-xs text-white/45">{item.dates}</span>
+                </div>
+                <ul class="mt-4 space-y-2">
+                  {item.bullets.map((bullet) => <li class="relative pl-5 text-sm leading-7 text-neutral before:absolute before:left-0 before:content-['→'] before:text-primary">{bullet}</li>)}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </section>
+      </div>
+
+      <aside class="space-y-10">
+        <section>
+          <h2 class="mb-5 font-serif text-xl font-bold text-white">Competencias clave</h2>
+          <div class="flex flex-wrap gap-2">
+            {skills.map((skill) => <span class="rounded-full border border-white/10 px-3 py-2 text-xs text-white/70">{skill}</span>)}
+          </div>
+        </section>
+
+        <section>
+          <h2 class="mb-5 font-serif text-xl font-bold text-white">Herramientas</h2>
+          <ul class="space-y-2 text-sm leading-6 text-neutral">
+            <li><strong class="text-white">Performance:</strong> Meta Ads Manager · Meta Business Suite · TikTok Business</li>
+            <li><strong class="text-white">Analítica y SEO:</strong> Google Analytics · Google Search Console · KPI & Reporting</li>
+            <li><strong class="text-white">Social Media:</strong> Facebook · Instagram · TikTok · Hootsuite</li>
+            <li><strong class="text-white">Contenido:</strong> Photoshop · Premiere · Audition · Canva</li>
+            <li><strong class="text-white">Web:</strong> WordPress · Microsoft Office · Excel · Google Sheets</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="mb-5 font-serif text-xl font-bold text-white">Educación</h2>
+          <p class="text-sm leading-7 text-neutral"><strong class="text-white">Universidad de San Martín de Porres</strong><br />Ciencias de la Comunicación · 2007–2014<br />Beca deportiva · Deportista calificado</p>
+        </section>
+
+        <section>
+          <h2 class="mb-5 font-serif text-xl font-bold text-white">Disponibilidad</h2>
+          <p class="text-sm leading-7 text-neutral">Marketing Digital, Digital Media, Social Media, Content Marketing, SEO, Performance Marketing y Comunicación Digital.</p>
+        </section>
+      </aside>
+    </div>
+  </section>
+
+  <style>
+    @media print {
+      :global(body) { background: white !important; color: #111 !important; }
+      :global(header), :global(footer) { display: none !important; }
+      :global(h1), :global(h2), :global(h3), :global(p), :global(li), :global(span) { color: #111 !important; }
+      :global(.text-primary) { color: #111 !important; }
+      :global(.border-white\/10) { border-color: #ddd !important; }
+    }
+  </style>
+</Layout>
