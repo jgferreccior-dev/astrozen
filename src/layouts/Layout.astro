@@ -24,10 +24,10 @@ const {
 } = SITE_CONFIG;
 
 const { title = siteTitle, description = siteDescription, profilePage = false } = Astro.props;
-const isHome = Astro.url.pathname === "/";
-const canonicalBase = canonicalURL ?? "https://joseferreccio-digital-josefr-89-9123.vercel.app/";
-const resolvedCanonical = new URL(Astro.url.pathname, canonicalBase).href;
-const ogImgUrl = new URL(socialImage, canonicalBase).href;
+const isHome = Astro.url.pathname === "/astrozen/" || Astro.url.pathname === "/";
+const canonicalBase = canonicalURL ?? "https://jgferreccior-dev.github.io/astrozen/";
+const resolvedCanonical = new URL(Astro.url.pathname.replace(/^\/astrozen/, ""), canonicalBase).href;
+const ogImgUrl = new URL(socialImage, "https://jgferreccior-dev.github.io").href;
 
 const personSchema = {
   "@type": "Person",
@@ -72,7 +72,7 @@ const structuredDataJson = structuredData ? JSON.stringify(structuredData) : nul
     <meta name="viewport" content="width=device-width" />
     <meta name="theme-color" content="#05080d" />
     <link rel="canonical" href={resolvedCanonical} />
-    <link rel="sitemap" href="/sitemap.xml" />
+    <link rel="sitemap" href="/astrozen/sitemap.xml" />
     <link rel="icon" type="image/svg+xml" href={siteLogo} />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
