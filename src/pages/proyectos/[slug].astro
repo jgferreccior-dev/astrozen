@@ -10,9 +10,30 @@ export function getStaticPaths() {
 }
 
 const { caseStudy } = Astro.props;
+const pageUrl = Astro.url.href;
+const caseStudySchema = {
+  "@type": "CreativeWork",
+  "@id": `${pageUrl}#case-study`,
+  "name": caseStudy.title,
+  "headline": caseStudy.title,
+  "description": caseStudy.intro,
+  "url": pageUrl,
+  "image": new URL(caseStudy.image, Astro.site ?? Astro.url).href,
+  "creator": { "@id": "https://jgferreccior-dev.github.io/#person" },
+  "about": caseStudy.organization,
+  "keywords": caseStudy.skills,
+  "isPartOf": {
+    "@type": "WebSite",
+    "@id": "https://jgferreccior-dev.github.io/#website",
+  },
+};
 ---
 
-<Layout title={`${caseStudy.title} — José Gerardo Ferreccio Riega`} description={caseStudy.intro}>
+<Layout
+  title={`${caseStudy.title} — José Gerardo Ferreccio Riega`}
+  description={caseStudy.intro}
+  structuredData={caseStudySchema}
+>
   <article class="py-14 md:py-24">
     <div class="mb-10 flex items-center justify-between gap-4 md:mb-14">
       <a
@@ -46,6 +67,7 @@ const { caseStudy } = Astro.props;
         width="1200"
         height="700"
         loading="eager"
+        fetchpriority="high"
       />
     </div>
 
