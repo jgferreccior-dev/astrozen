@@ -1,14 +1,12 @@
 import type { SiteConfig, SiteContent } from "../types";
 
-const BASE_PATH = "/astrozen";
-
 export const SITE_CONFIG: SiteConfig = {
   title: "José Gerardo Ferreccio Riega — Digital Media & SEO Specialist",
   author: "José Gerardo Ferreccio Riega",
   description:
     "Portfolio profesional de José Gerardo Ferreccio Riega, Digital Media & SEO Specialist especializado en estrategia digital, SEO, contenidos, Social Media, Performance Marketing y analítica.",
   lang: "es",
-  siteLogo: `${BASE_PATH}/favicon.svg`,
+  siteLogo: "/favicon.svg",
   navLinks: [
     { text: "Proyectos", href: "#projects" },
     { text: "Skills & Tools", href: "#skills" },
@@ -19,8 +17,8 @@ export const SITE_CONFIG: SiteConfig = {
   socialLinks: [
     { text: "LinkedIn", href: "https://www.linkedin.com/in/jose-ferreccio-4211901b5/" },
   ],
-  socialImage: `${BASE_PATH}/zen-og.png`,
-  canonicalURL: "https://jgferreccior-dev.github.io/astrozen/",
+  socialImage: "/zen-og.png",
+  canonicalURL: "https://jgferreccior-dev.github.io/",
 };
 
 export const SITE_CONTENT: SiteContent = {
@@ -99,33 +97,33 @@ export const SITE_CONTENT: SiteContent = {
       name: "CICAJ — Estrategia de crecimiento digital",
       summary: "Estrategia de contenidos, Social Media y Meta Ads para comunicación académica e institucional dirigida a audiencias de posgrado.",
       metrics: [["+275%", "alcance digital"], ["+802%", "clics hacia contenidos"]],
-      linkPreview: `${BASE_PATH}/proyectos/cicaj`,
+      linkPreview: "/proyectos/cicaj",
       linkSource: "https://www.pucp.edu.pe/cicaj/",
-      image: `${BASE_PATH}/project-cicaj.svg`,
+      image: "/project-cicaj.svg",
     },
     {
       name: "ATV Deportes",
       summary: "Experiencias digitales y contenidos multiplataforma para grandes eventos deportivos como Tokio 2020, Qatar 2022 y Champions League.",
       metrics: [["+30%", "tráfico web"], ["−15%", "porcentaje de rebote"]],
-      linkPreview: `${BASE_PATH}/proyectos/atv-deportes`,
+      linkPreview: "/proyectos/atv-deportes",
       linkSource: "https://www.atv.pe/",
-      image: `${BASE_PATH}/project-atv-sports.svg`,
+      image: "/project-atv-sports.svg",
     },
     {
       name: "ATV — Web & Content",
       summary: "Gestión editorial y producción de contenido digital a escala para la plataforma web de ATV.",
       metrics: [["145K+", "artículos con el equipo"], ["1M+", "usuarios únicos mensuales"]],
-      linkPreview: `${BASE_PATH}/proyectos/atv-web`,
+      linkPreview: "/proyectos/atv-web",
       linkSource: "https://www.atv.pe/",
-      image: `${BASE_PATH}/project-atv-web.svg`,
+      image: "/project-atv-web.svg",
     },
     {
       name: "Deportes en la Red",
       summary: "Producción de programas digitales y estrategia de distribución para construir audiencias deportivas en plataformas digitales.",
       metrics: [["9K", "pico de espectadores"], ["15K", "seguidores en 4 meses"]],
-      linkPreview: `${BASE_PATH}/proyectos/deportes-en-la-red`,
+      linkPreview: "/proyectos/deportes-en-la-red",
       linkSource: "https://www.atv.pe/",
-      image: `${BASE_PATH}/project-deportes.svg`,
+      image: "/project-deportes.svg",
     },
   ],
   about: {
