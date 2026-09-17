@@ -29,6 +29,10 @@ const isHome = Astro.url.pathname === "/";
 const canonicalBase = canonicalURL ?? "https://jgferreccior-dev.github.io/";
 const resolvedCanonical = new URL(Astro.url.pathname, canonicalBase).href;
 const ogImgUrl = new URL(socialImage, "https://jgferreccior-dev.github.io").href;
+const resolvedNavLinks = navLinks.map((link) => ({
+  ...link,
+  href: isHome || !link.href.startsWith("#") ? link.href : `/${link.href}`,
+}));
 
 const personSchema = {
   "@type": "Person",
@@ -103,7 +107,7 @@ const structuredDataJson = structuredData ? JSON.stringify(structuredData) : nul
     >
       Saltar al contenido
     </a>
-    <Header siteLogo={siteLogo} navLinks={navLinks} />
+    <Header siteLogo={siteLogo} navLinks={resolvedNavLinks} />
     <main id="main-content" class="mx-auto max-w-5xl px-5">
       <slot />
       {isHome && <TrustStrip />}
