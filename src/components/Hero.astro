@@ -33,20 +33,28 @@ const { name, specialty, summary, email } = Astro.props;
     </div>
 
     <div class="pt-12 md:pt-16">
-      <p class="mb-6 text-sm font-medium uppercase tracking-[0.24em] text-white/65">
-        Estrategia · Contenido · Audiencia · Resultados
-      </p>
-      <h1 class="mb-3 max-w-4xl font-serif text-5xl font-bold leading-[0.95] tracking-tightest text-white sm:text-6xl md:text-8xl">
+      <div class="mb-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs font-semibold uppercase tracking-[0.18em] text-white/65 sm:text-sm">
+        <span>Estrategia · Contenido · SEO · Performance</span>
+        <span class="hidden text-primary sm:inline">•</span>
+        <span>10+ años de experiencia</span>
+      </div>
+
+      <h1 class="mb-5 max-w-4xl font-serif text-5xl font-bold leading-[0.95] tracking-tightest text-white sm:text-6xl md:text-8xl">
         Digital Media <span class="text-primary">&</span><br />
         <span class="text-primary">SEO</span> Specialist
       </h1>
-      <p class="mb-9 max-w-2xl text-base leading-7 text-white/75 md:text-lg">
-        {summary} Conecto contenidos, audiencias y datos para transformar objetivos digitales en resultados medibles.
+
+      <p class="mb-5 max-w-3xl text-xl font-medium leading-8 text-white sm:text-2xl md:text-3xl md:leading-10">
+        Conecto contenido, audiencias y datos para convertir objetivos digitales en resultados medibles.
+      </p>
+
+      <p class="mb-9 max-w-2xl text-base leading-7 text-white/70 md:text-lg">
+        {summary} Experiencia en medios de comunicación y sector académico, desarrollando proyectos digitales orientados a audiencias y resultados.
       </p>
 
       <div class="mb-12 flex flex-wrap gap-3">
         <a class="rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-[#05080d]" href="#projects">
-          Ver proyectos →
+          Ver casos de estudio →
         </a>
         <a class="rounded-full border border-white/25 bg-black/20 px-7 py-3.5 text-sm font-medium text-white backdrop-blur-sm transition-colors hover:border-white/50 focus:outline-none focus:ring-2 focus:ring-white/60" href="/cv">
           Ver CV
