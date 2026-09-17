@@ -13,65 +13,96 @@ const { caseStudy } = Astro.props;
 ---
 
 <Layout title={`${caseStudy.title} — José Gerardo Ferreccio Riega`} description={caseStudy.intro}>
-  <article class="py-16 md:py-28">
-    <a href="/astrozen/#projects" class="mb-10 inline-flex items-center gap-2 text-sm text-neutral transition-colors hover:text-white focus:outline-none focus:ring-2 focus:ring-primary md:mb-12">
-      ← Volver a proyectos
-    </a>
-
-    <header class="max-w-4xl">
-      <p class="mb-5 text-xs font-medium uppercase tracking-[0.2em] text-primary">{caseStudy.eyebrow}</p>
-      <h1 class="font-serif text-4xl font-bold leading-tight tracking-tightest text-white sm:text-5xl md:text-7xl">{caseStudy.title}</h1>
-      <p class="mt-6 max-w-3xl text-base leading-8 text-neutral md:mt-7 md:text-xl">{caseStudy.intro}</p>
-      <p class="mt-4 text-sm font-medium text-white/70">{caseStudy.organization}</p>
-    </header>
-
-    <div class="mt-10 overflow-hidden rounded-2xl border border-white/10 bg-[#151b24] md:mt-14">
-      <img src={caseStudy.image} alt={`Vista del proyecto ${caseStudy.title}`} class="h-auto w-full" width="1200" height="700" loading="eager" />
+  <article class="py-14 md:py-24">
+    <div class="mb-10 flex items-center justify-between gap-4 md:mb-14">
+      <a
+        href="/#projects"
+        class="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-sm font-medium text-neutral transition hover:border-white/20 hover:text-white focus:outline-none focus:ring-2 focus:ring-primary"
+      >
+        ← Volver a proyectos
+      </a>
+      <span class="hidden text-xs font-semibold uppercase tracking-[0.18em] text-white/40 sm:block">Caso de estudio</span>
     </div>
 
-    <div class="my-12 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 md:my-16 md:grid-cols-4">
+    <header class="relative overflow-hidden rounded-3xl border border-white/10 bg-[#101720] px-6 py-10 md:px-12 md:py-14">
+      <div class="absolute -right-24 -top-24 h-64 w-64 rounded-full bg-primary/10 blur-3xl" aria-hidden="true"></div>
+      <div class="relative max-w-4xl">
+        <p class="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-primary">{caseStudy.eyebrow}</p>
+        <h1 class="font-serif text-4xl font-bold leading-tight tracking-tightest text-white sm:text-5xl md:text-7xl">{caseStudy.title}</h1>
+        <p class="mt-6 max-w-3xl text-base leading-8 text-neutral md:text-xl">{caseStudy.intro}</p>
+        <div class="mt-7 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-white/60">
+          <span>{caseStudy.organization}</span>
+          <span class="hidden text-white/20 sm:inline">•</span>
+          <span>Digital Media & SEO</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="mt-6 overflow-hidden rounded-3xl border border-white/10 bg-[#151b24] shadow-2xl shadow-black/20 md:mt-8">
+      <img
+        src={caseStudy.image}
+        alt={`Vista del proyecto ${caseStudy.title}`}
+        class="h-auto w-full"
+        width="1200"
+        height="700"
+        loading="eager"
+      />
+    </div>
+
+    <div class="my-10 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 md:my-14 md:grid-cols-4">
       {caseStudy.metrics.map(([value, label]) => (
-        <div class="bg-black p-5 md:p-8">
-          <p class="font-serif text-3xl font-bold text-primary md:text-5xl">{value}</p>
+        <div class="bg-[#0b1118] p-5 md:p-7">
+          <p class="font-serif text-3xl font-bold tracking-tight text-white md:text-5xl">{value}</p>
           <p class="mt-2 text-xs leading-6 text-neutral md:text-sm">{label}</p>
         </div>
       ))}
     </div>
 
-    <div class="grid gap-12 md:grid-cols-[1fr_280px] md:gap-20">
+    <div class="grid gap-12 md:grid-cols-[minmax(0,1fr)_280px] md:gap-20">
       <div class="space-y-14 md:space-y-16">
         <section>
-          <p class="mb-4 text-xs font-medium uppercase tracking-[0.18em] text-neutral">01 · El reto</p>
-          <h2 class="mb-5 font-serif text-3xl font-semibold text-white md:text-4xl">Objetivo y contexto</h2>
-          <p class="text-base leading-8 text-neutral md:text-lg">{caseStudy.challenge}</p>
+          <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary">01 · El reto</p>
+          <h2 class="mb-5 font-serif text-3xl font-semibold tracking-tight text-white md:text-4xl">Objetivo y contexto</h2>
+          <p class="max-w-3xl text-base leading-8 text-neutral md:text-lg">{caseStudy.challenge}</p>
         </section>
 
         <section>
-          <p class="mb-4 text-xs font-medium uppercase tracking-[0.18em] text-neutral">02 · El enfoque</p>
-          <h2 class="mb-6 font-serif text-3xl font-semibold text-white md:text-4xl">Estrategia y ejecución</h2>
-          <ul class="space-y-4">
+          <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary">02 · El enfoque</p>
+          <h2 class="mb-6 font-serif text-3xl font-semibold tracking-tight text-white md:text-4xl">Estrategia y ejecución</h2>
+          <ul class="max-w-3xl space-y-4">
             {caseStudy.approach.map((item) => (
-              <li class="relative pl-7 text-base leading-8 text-neutral before:absolute before:left-0 before:top-1 before:text-primary before:content-['→']">{item}</li>
+              <li class="relative pl-7 text-base leading-8 text-neutral before:absolute before:left-0 before:top-0.5 before:font-semibold before:text-primary before:content-['→']">{item}</li>
             ))}
           </ul>
         </section>
 
-        <section>
-          <p class="mb-4 text-xs font-medium uppercase tracking-[0.18em] text-neutral">03 · Resultados</p>
-          <h2 class="mb-5 font-serif text-3xl font-semibold text-white md:text-4xl">Impacto</h2>
-          <p class="text-base leading-8 text-neutral md:text-lg">{caseStudy.results}</p>
+        <section class="rounded-2xl border border-white/10 bg-[#101720] p-6 md:p-8">
+          <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary">03 · Resultados</p>
+          <h2 class="mb-5 font-serif text-3xl font-semibold tracking-tight text-white md:text-4xl">Impacto</h2>
+          <p class="max-w-3xl text-base leading-8 text-neutral md:text-lg">{caseStudy.results}</p>
         </section>
       </div>
 
-      <aside class="h-fit border-t border-white/10 pt-6 md:border-l md:border-t-0 md:pl-8 md:pt-0">
-        <p class="mb-4 text-xs font-medium uppercase tracking-[0.18em] text-neutral">Especialidades</p>
-        <p class="text-sm leading-7 text-white">{caseStudy.skills}</p>
-        <a href={caseStudy.reference} target="_blank" rel="noreferrer" class="mt-8 inline-block text-sm font-medium text-primary hover:underline focus:outline-none focus:ring-2 focus:ring-primary">Ver referencia ↗</a>
+      <aside class="h-fit rounded-2xl border border-white/10 bg-[#0b1118] p-6 md:sticky md:top-28">
+        <p class="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-primary">Especialidades</p>
+        <p class="text-sm leading-7 text-white/80">{caseStudy.skills}</p>
+        <div class="mt-7 border-t border-white/10 pt-6">
+          <p class="mb-3 text-xs uppercase tracking-[0.16em] text-white/40">Referencia</p>
+          <a
+            href={caseStudy.reference}
+            target="_blank"
+            rel="noreferrer"
+            class="text-sm font-semibold text-white transition hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary"
+          >
+            Ver sitio de referencia ↗
+          </a>
+        </div>
       </aside>
     </div>
 
-    <div class="mt-16 border-t border-white/10 pt-8 md:mt-20">
-      <a href="/astrozen/#projects" class="text-sm font-medium text-white transition-colors hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary">← Explorar más proyectos</a>
+    <div class="mt-16 flex flex-col gap-4 border-t border-white/10 pt-8 sm:flex-row sm:items-center sm:justify-between md:mt-20">
+      <a href="/#projects" class="text-sm font-semibold text-white transition hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary">← Explorar más proyectos</a>
+      <a href="/#contact" class="text-sm font-semibold text-primary transition hover:text-white focus:outline-none focus:ring-2 focus:ring-primary">Hablemos →</a>
     </div>
   </article>
 </Layout>
