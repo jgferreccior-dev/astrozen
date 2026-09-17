@@ -1,4 +1,5 @@
 ---
+import "../styles/global.css";
 import Header from "@components/Header.astro";
 import { Font } from "astro:assets";
 import { SITE_CONFIG } from "@config";
@@ -24,9 +25,9 @@ const {
 } = SITE_CONFIG;
 
 const { title = siteTitle, description = siteDescription, profilePage = false } = Astro.props;
-const isHome = Astro.url.pathname === "/astrozen/" || Astro.url.pathname === "/";
-const canonicalBase = canonicalURL ?? "https://jgferreccior-dev.github.io/astrozen/";
-const resolvedCanonical = new URL(Astro.url.pathname.replace(/^\/astrozen/, ""), canonicalBase).href;
+const isHome = Astro.url.pathname === "/";
+const canonicalBase = canonicalURL ?? "https://jgferreccior-dev.github.io/";
+const resolvedCanonical = new URL(Astro.url.pathname, canonicalBase).href;
 const ogImgUrl = new URL(socialImage, "https://jgferreccior-dev.github.io").href;
 
 const personSchema = {
@@ -72,7 +73,7 @@ const structuredDataJson = structuredData ? JSON.stringify(structuredData) : nul
     <meta name="viewport" content="width=device-width" />
     <meta name="theme-color" content="#05080d" />
     <link rel="canonical" href={resolvedCanonical} />
-    <link rel="sitemap" href="/astrozen/sitemap.xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="icon" type="image/svg+xml" href={siteLogo} />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
