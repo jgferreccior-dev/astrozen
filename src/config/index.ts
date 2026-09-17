@@ -73,16 +73,16 @@ export const SITE_CONTENT: SiteContent = {
   ],
   projects: [
     {
-      name: "CICAJ — Estrategia de crecimiento digital", summary: "Estrategia de contenidos, Social Media y Meta Ads para comunicación académica e institucional dirigida a audiencias de posgrado.", metrics: [["+275%", "alcance digital"], ["+802%", "clics hacia contenidos"]], linkPreview: "/proyectos/cicaj", linkSource: "https://cicaj.pucp.edu.pe/", image: "/project-cicaj.svg",
+      name: "CICAJ — Estrategia de crecimiento digital", role: "Community Manager", period: "2022 — Actualidad", summary: "Estrategia de contenidos, Social Media y Meta Ads para comunicación académica e institucional dirigida a audiencias de posgrado.", metrics: [["+275%", "alcance digital"], ["+802%", "clics hacia contenidos"]], linkPreview: "/proyectos/cicaj", linkSource: "https://cicaj.pucp.edu.pe/", image: "/project-cicaj.svg",
     },
     {
-      name: "ATV Deportes", summary: "Experiencias digitales y contenidos multiplataforma para grandes eventos deportivos como Tokio 2020, Qatar 2022 y Champions League.", metrics: [["+30%", "tráfico web"], ["−15%", "porcentaje de rebote"]], linkPreview: "/proyectos/atv-deportes", linkSource: "https://www.atv.pe/", image: "/project-atv-sports.svg",
+      name: "ATV Deportes", role: "Líder de Contenido Deportivo", period: "2020 — Actualidad", summary: "Experiencias digitales y contenidos multiplataforma para grandes eventos deportivos como Tokio 2020, Qatar 2022 y Champions League.", metrics: [["+30%", "tráfico web"], ["−15%", "porcentaje de rebote"]], linkPreview: "/proyectos/atv-deportes", linkSource: "https://www.atv.pe/", image: "/project-atv-sports.svg",
     },
     {
-      name: "ATV — Web & Content", summary: "Gestión editorial y producción de contenido digital a escala para la plataforma web de ATV.", metrics: [["145K+", "artículos con el equipo"], ["1M+", "usuarios únicos mensuales"]], linkPreview: "/proyectos/atv-web", linkSource: "https://www.atv.pe/", image: "/project-atv-web.svg",
+      name: "ATV — Web & Content", role: "Editor de Contenido Web", period: "2021 — Actualidad", summary: "Gestión editorial y producción de contenido digital a escala para la plataforma web de ATV.", metrics: [["145K+", "artículos con el equipo"], ["1M+", "usuarios únicos mensuales"]], linkPreview: "/proyectos/atv-web", linkSource: "https://www.atv.pe/", image: "/project-atv-web.svg",
     },
     {
-      name: "Deportes en la Red", summary: "Producción de programas digitales y estrategia de distribución para construir audiencias deportivas en plataformas digitales.", metrics: [["9K", "pico de espectadores"], ["15K", "seguidores en 4 meses"]], linkPreview: "/proyectos/deportes-en-la-red", linkSource: "https://www.atv.pe/", image: "/project-deportes.svg",
+      name: "Deportes en la Red", role: "Productor de Programas Digitales", period: "2018 — 2020", summary: "Producción de programas digitales y estrategia de distribución para construir audiencias deportivas en plataformas digitales.", metrics: [["9K", "pico de espectadores"], ["15K", "seguidores en 4 meses"]], linkPreview: "/proyectos/deportes-en-la-red", linkSource: "https://www.atv.pe/", image: "/project-deportes.svg",
     },
   ],
   about: {
