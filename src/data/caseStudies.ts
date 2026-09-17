@@ -5,6 +5,8 @@ export const caseStudies = {
     intro:
       "Estrategia digital para fortalecer el alcance, la interacción y la conversión de contenidos académicos dirigidos principalmente a audiencias de posgrado.",
     organization: "CICAJ · Pontificia Universidad Católica del Perú",
+    role: "Community Manager",
+    period: "Enero 2022 — Actualidad",
     image: "/project-cicaj.svg",
     reference: "https://cicaj.pucp.edu.pe/",
     metrics: [
@@ -31,6 +33,8 @@ export const caseStudies = {
     intro:
       "Estrategia de contenidos y experiencias digitales para acompañar grandes eventos deportivos y convertir la cobertura en oportunidades de crecimiento para la plataforma web.",
     organization: "Grupo ATV",
+    role: "Líder de Contenido Deportivo",
+    period: "2020 — Actualidad",
     image: "/project-atv-sports.svg",
     reference: "https://www.atv.pe/",
     metrics: [["+30%", "tráfico web"], ["−15%", "porcentaje de rebote"], ["3", "grandes eventos deportivos"]],
@@ -52,6 +56,8 @@ export const caseStudies = {
     intro:
       "Gestión y producción de contenido digital a escala para una plataforma informativa con una alta frecuencia de publicación.",
     organization: "Grupo ATV",
+    role: "Editor de Contenido Web",
+    period: "2021 — Actualidad",
     image: "/project-atv-web.svg",
     reference: "https://www.atv.pe/",
     metrics: [["145K+", "artículos producidos con el equipo"], ["1M+", "usuarios únicos mensuales promedio"]],
@@ -73,6 +79,8 @@ export const caseStudies = {
     intro:
       "Desarrollo de un formato deportivo digital pensado para trasladar la experiencia de contenidos televisivos hacia plataformas digitales y construir una comunidad propia.",
     organization: "Grupo ATV",
+    role: "Productor de Programas Digitales",
+    period: "2018 — 2020",
     image: "/project-deportes.svg",
     reference: "https://www.atv.pe/",
     metrics: [["9K", "pico de espectadores"], ["15K", "seguidores en 4 meses"]],
