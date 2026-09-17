@@ -6,7 +6,7 @@ export const caseStudies = {
       "Estrategia digital para fortalecer el alcance, la interacción y la conversión de contenidos académicos dirigidos principalmente a audiencias de posgrado.",
     organization: "CICAJ · Pontificia Universidad Católica del Perú",
     image: "/project-cicaj.svg",
-    reference: "https://www.pucp.edu.pe/cicaj/",
+    reference: "https://cicaj.pucp.edu.pe/",
     metrics: [
       ["+275%", "alcance digital"],
       ["+448%", "visualizaciones de contenido"],
@@ -33,11 +33,7 @@ export const caseStudies = {
     organization: "Grupo ATV",
     image: "/project-atv-sports.svg",
     reference: "https://www.atv.pe/",
-    metrics: [
-      ["+30%", "tráfico web"],
-      ["−15%", "porcentaje de rebote"],
-      ["3", "grandes eventos deportivos"],
-    ],
+    metrics: [["+30%", "tráfico web"], ["−15%", "porcentaje de rebote"], ["3", "grandes eventos deportivos"]],
     challenge:
       "Los grandes eventos deportivos generan picos de interés, pero requieren experiencias digitales capaces de concentrar tráfico, ofrecer contenido exclusivo y facilitar la navegación entre piezas de cobertura.",
     approach: [
@@ -58,10 +54,7 @@ export const caseStudies = {
     organization: "Grupo ATV",
     image: "/project-atv-web.svg",
     reference: "https://www.atv.pe/",
-    metrics: [
-      ["145K+", "artículos producidos con el equipo"],
-      ["1M+", "usuarios únicos mensuales promedio"],
-    ],
+    metrics: [["145K+", "artículos producidos con el equipo"], ["1M+", "usuarios únicos mensuales promedio"]],
     challenge:
       "Trabajar con grandes volúmenes de información exige procesos editoriales consistentes, capacidad de priorización y adaptación del contenido al consumo digital.",
     approach: [
@@ -82,10 +75,7 @@ export const caseStudies = {
     organization: "Grupo ATV",
     image: "/project-deportes.svg",
     reference: "https://www.atv.pe/",
-    metrics: [
-      ["9K", "pico de espectadores"],
-      ["15K", "seguidores en 4 meses"],
-    ],
+    metrics: [["9K", "pico de espectadores"], ["15K", "seguidores en 4 meses"]],
     challenge:
       "El reto consistía en desarrollar una propuesta deportiva nativa para entornos digitales, con formatos capaces de generar audiencia y comunidad más allá de la emisión televisiva tradicional.",
     approach: [
