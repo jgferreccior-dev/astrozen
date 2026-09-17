@@ -1,12 +1,9 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import "../styles/global.css";
 
 const experience = [
   {
-    company: "CICAJ — Pontificia Universidad Católica del Perú (PUCP)",
-    role: "Community Manager",
-    dates: "Enero 2022 — Actualidad",
+    company: "CICAJ — Pontificia Universidad Católica del Perú (PUCP)", role: "Community Manager", dates: "Enero 2022 — Actualidad",
     bullets: [
       "Incrementé el alcance de la comunidad digital en 275% y las visualizaciones de contenido en 448% en un trimestre, mediante calendarios editoriales, segmentación de audiencias y pauta digital en Meta Ads.",
       "Elevé los clics hacia inscripciones y contenidos académicos en 802% y alcancé 3.1% de engagement, mediante estrategias de Content Strategy adaptadas a audiencias de posgrado en Facebook e Instagram.",
@@ -14,54 +11,42 @@ const experience = [
     ],
   },
   {
-    company: "Grupo ATV",
-    role: "Líder de Contenido Deportivo",
-    dates: "2020 — Actualidad · Rol concurrente",
+    company: "Grupo ATV", role: "Líder de Contenido Deportivo", dates: "2020 — Actualidad · Rol concurrente",
     bullets: [
       "Incrementé el tráfico web en 30% y reduje el porcentaje de rebote en 15% mediante la creación y optimización de landing pages para grandes eventos deportivos, utilizando contenido exclusivo y estrategias de distribución digital.",
       "Coordiné landing pages, contenidos y programas digitales asociados a Juegos Olímpicos de Tokio 2020, Mundial de Qatar 2022 y Champions League.",
     ],
   },
   {
-    company: "Grupo ATV",
-    role: "Editor de Contenido Web",
-    dates: "2021 — Actualidad · Rol concurrente",
+    company: "Grupo ATV", role: "Editor de Contenido Web", dates: "2021 — Actualidad · Rol concurrente",
     bullets: [
       "Coordiné la producción y publicación de más de 145,000 artículos con el equipo editorial, contribuyendo a un promedio superior a 1 millón de usuarios únicos mensuales en la web de ATV.",
       "Optimicé el flujo editorial mediante selección, revisión, organización y preparación de contenidos, coordinando con los equipos responsables de producción y publicación.",
     ],
   },
   {
-    company: "Grupo ATV",
-    role: "Productor de Programas Digitales",
-    dates: "2018 — 2020",
+    company: "Grupo ATV", role: "Productor de Programas Digitales", dates: "2018 — 2020",
     bullets: [
       "Alcancé picos de 9,000 espectadores con programas digitales como Deportes en la Red en 2018 y creé una comunidad de 15,000 seguidores en cuatro meses para el fanpage del programa.",
       "Desarrollé programas digitales para redes sociales y web, transformando contenidos televisivos en formatos adaptados al consumo digital.",
     ],
   },
   {
-    company: "Grupo ATV",
-    role: "Community Manager",
-    dates: "2017 — 2019",
+    company: "Grupo ATV", role: "Community Manager", dates: "2017 — 2019",
     bullets: [
       "Gestioné las redes sociales de ATV y ATV+ mediante planificación, publicación y seguimiento de contenidos, adaptando formatos, mensajes y calendarios a cada plataforma.",
       "Optimicé la presencia digital de las marcas mediante seguimiento de métricas de audiencia, interacción y rendimiento de contenidos.",
     ],
   },
   {
-    company: "Grupo ATV",
-    role: "Redactor Creativo",
-    dates: "2016 — 2017",
+    company: "Grupo ATV", role: "Redactor Creativo", dates: "2016 — 2017",
     bullets: [
       "Desarrollé contenidos editoriales para la web de ATV mediante investigación, redacción y adaptación de información para consumo digital.",
       "Adapté contenidos a formatos web mediante criterios de redacción digital orientados a relevancia, claridad y experiencia del usuario.",
     ],
   },
   {
-    company: "Zebra 3 Producciones",
-    role: "Editor de Videos",
-    dates: "2015 — 2016",
+    company: "Zebra 3 Producciones", role: "Editor de Videos", dates: "2015 — 2016",
     bullets: [
       "Produje piezas audiovisuales mediante edición de material de casting y contenidos realizados por actores.",
       "Optimicé materiales audiovisuales para su entrega final mediante procesos de edición y postproducción.",
@@ -77,7 +62,7 @@ const skills = [
 ];
 ---
 
-<Layout title="CV — José Gerardo Ferreccio Riega" description="CV profesional de José Gerardo Ferreccio Riega — Digital Media & SEO Specialist." profilePage={true}>
+<Layout title="CV — José Gerardo Ferreccio Riega" description="CV profesional de José Gerardo Ferreccio Riega — Digital Media & SEO Specialist" profilePage={true}>
   <section class="py-16 md:py-24 print:py-8">
     <div class="mb-12 flex flex-col gap-6 border-b border-white/10 pb-10 md:flex-row md:items-end md:justify-between print:mb-8 print:pb-6">
       <div>
@@ -88,7 +73,7 @@ const skills = [
       </div>
       <div class="flex gap-3 print:hidden">
         <button onclick="window.print()" class="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5">Guardar / imprimir PDF</button>
-        <a href="/astrozen/" class="rounded-full border border-white/20 px-6 py-3 text-sm font-medium text-white hover:border-white/50">Volver al portafolio</a>
+        <a href="/" class="rounded-full border border-white/20 px-6 py-3 text-sm font-medium text-white hover:border-white/50">Volver al portafolio</a>
       </div>
     </div>
 
@@ -125,7 +110,6 @@ const skills = [
             {skills.map((skill) => <span class="rounded-full border border-white/10 px-3 py-2 text-xs text-white/70">{skill}</span>)}
           </div>
         </section>
-
         <section>
           <h2 class="mb-5 font-serif text-xl font-bold text-white">Herramientas</h2>
           <ul class="space-y-2 text-sm leading-6 text-neutral">
@@ -136,27 +120,23 @@ const skills = [
             <li><strong class="text-white">Web:</strong> WordPress · Microsoft Office · Excel · Google Sheets</li>
           </ul>
         </section>
-
         <section>
           <h2 class="mb-5 font-serif text-xl font-bold text-white">Educación</h2>
-          <p class="text-sm leading-7 text-neutral"><strong class="text-white">Universidad de San Martín de Porres</strong><br />Ciencias de la Comunicación · 2007–2014<br />Beca deportiva · Deportista calificado</p>
+          <p class="text-sm leading-7 text-neutral"><strong class="text-white">Universidad De San Martín de Porres</strong><br />Ciencias de la Comunicación · 2007–2014<br />Beca deportiva · Deportista calificado</p>
         </section>
-
         <section>
-          <h2 class="mb-5 font-serif text-xl font-bold text-white">Disponibilidad</h2>
+          <h2 class="mb-5 font-serif text-xl font-bold text-white">Áreas de especialidad</h2>
           <p class="text-sm leading-7 text-neutral">Marketing Digital, Digital Media, Social Media, Content Marketing, SEO, Performance Marketing y Comunicación Digital.</p>
         </section>
       </aside>
     </div>
-
-  <style>
-    @media print {
-      :global(body) { background: white !important; color: #111 !important; }
-      :global(header), :global(footer) { display: none !important; }
-      :global(h1), :global(h2), :global(h3), :global(p), :global(li), :global(span) { color: #111 !important; }
-      :global(.text-primary) { color: #111 !important; }
-      :global(.border-white\/10) { border-color: #ddd !important; }
-    }
-  </style>
   </section>
 </Layout>
+
+<style>
+  @media print {
+    :global(body) { background: white !important; color: #111 !important; }
+    :global(header), :global(footer) { display: none !important; }
+    :global(h1), :global(h2), :global(h3), :global(p), :global(li), :global(span) { color: #111 !important; }
+  }
+</style>
