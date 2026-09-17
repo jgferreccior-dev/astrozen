@@ -10,6 +10,7 @@ interface Props {
   title?: string;
   description?: string;
   profilePage?: boolean;
+  structuredData?: Record<string, unknown>;
 }
 
 const {
@@ -24,7 +25,12 @@ const {
   canonicalURL,
 } = SITE_CONFIG;
 
-const { title = siteTitle, description = siteDescription, profilePage = false } = Astro.props;
+const {
+  title = siteTitle,
+  description = siteDescription,
+  profilePage = false,
+  structuredData: pageStructuredData,
+} = Astro.props;
 const isHome = Astro.url.pathname === "/";
 const canonicalBase = canonicalURL ?? "https://jgferreccior-dev.github.io/";
 const resolvedCanonical = new URL(Astro.url.pathname, canonicalBase).href;
@@ -36,20 +42,33 @@ const resolvedNavLinks = navLinks.map((link) => ({
 
 const personSchema = {
   "@type": "Person",
+  "@id": `${canonicalBase}#person`,
   "name": author,
   "jobTitle": "Digital Media & SEO Specialist",
   "description": siteDescription,
   "url": canonicalBase,
   "email": "mailto:jgferreccior@gmail.com",
   "sameAs": socialLinks.map((link) => link.href),
+  "knowsAbout": [
+    "Digital Marketing",
+    "Digital Media",
+    "SEO",
+    "Content Marketing",
+    "Social Media",
+    "Performance Marketing",
+    "Digital Analytics",
+    "Communication",
+    "Sports Media",
+  ],
 };
 
-const structuredData = profilePage || isHome
+const baseStructuredData = profilePage || isHome
   ? {
       "@context": "https://schema.org",
       "@graph": [
         {
           "@type": "WebSite",
+          "@id": `${canonicalBase}#website`,
           "name": author,
           "url": canonicalBase,
           "inLanguage": "es-PE",
@@ -64,6 +83,13 @@ const structuredData = profilePage || isHome
       ],
     }
   : null;
+
+const structuredData = pageStructuredData
+  ? {
+      "@context": "https://schema.org",
+      "@graph": [pageStructuredData, personSchema],
+    }
+  : baseStructuredData;
 const structuredDataJson = structuredData ? JSON.stringify(structuredData) : null;
 ---
 
@@ -94,11 +120,13 @@ const structuredDataJson = structuredData ? JSON.stringify(structuredData) : nul
     <meta property="og:url" content={resolvedCanonical} />
     <meta property="og:image" content={ogImgUrl} />
     <meta property="og:image:alt" content={`${author} — ${title}`} />
+    <meta property="og:image:type" content="image/png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content={resolvedCanonical} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImgUrl} />
+    <meta name="twitter:image:alt" content={`${author} — ${title}`} />
   </head>
   <body class="bg-black font-sans">
     <a
