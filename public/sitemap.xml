@@ -1,27 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://joseferreccio-digital-josefr-89-9123.vercel.app/</loc>
-    <lastmod>2026-09-16</lastmod>
-  </url>
-  <url>
-    <loc>https://joseferreccio-digital-josefr-89-9123.vercel.app/cv</loc>
-    <lastmod>2026-09-16</lastmod>
-  </url>
-  <url>
-    <loc>https://joseferreccio-digital-josefr-89-9123.vercel.app/proyectos/cicaj</loc>
-    <lastmod>2026-09-15</lastmod>
-  </url>
-  <url>
-    <loc>https://joseferreccio-digital-josefr-89-9123.vercel.app/proyectos/atv-deportes</loc>
-    <lastmod>2026-09-15</lastmod>
-  </url>
-  <url>
-    <loc>https://joseferreccio-digital-josefr-89-9123.vercel.app/proyectos/atv-web</loc>
-    <lastmod>2026-09-15</lastmod>
-  </url>
-  <url>
-    <loc>https://joseferreccio-digital-josefr-89-9123.vercel.app/proyectos/deportes-en-la-red</loc>
-    <lastmod>2026-09-15</lastmod>
-  </url>
+  <url><loc>https://jgferreccior-dev.github.io/</loc></url>
+  <url><loc>https://jgferreccior-dev.github.io/cv</loc></url>
+  <url><loc>https://jgferreccior-dev.github.io/proyectos/cicaj</loc></url>
+  <url><loc>https://jgferreccior-dev.github.io/proyectos/atv-deportes</loc></url>
+  <url><loc>https://jgferreccior-dev.github.io/proyectos/atv-web</loc></url>
+  <url><loc>https://jgferreccior-dev.github.io/proyectos/deportes-en-la-red</loc></url>
 </urlset>
