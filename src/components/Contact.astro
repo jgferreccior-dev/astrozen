@@ -23,10 +23,24 @@ const { email } = Astro.props;
       </div>
       <div class="flex flex-col items-start gap-3">
         <a
-          href={`mailto:${email}`}
-          class="inline-block rounded-full bg-primary px-8 py-4 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-[#0b1118]"
+          href="/cv"
+          class="rounded-full bg-primary px-8 py-4 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-[#0b1118]"
         >
-          {email} →
+          Ver CV →
+        </a>
+        <a
+          href={`mailto:${email}`}
+          class="rounded-full border border-white/20 px-8 py-4 text-sm font-medium text-white hover:border-white/45 focus:outline-none focus:ring-2 focus:ring-primary"
+        >
+          Escribirme por email
+        </a>
+        <a
+          href="https://www.linkedin.com/in/jose-ferreccio-4211901b/"
+          target="_blank"
+          rel="noreferrer"
+          class="text-sm font-medium text-white/65 hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary"
+        >
+          LinkedIn ↗
         </a>
       </div>
     </div>
