@@ -13,33 +13,13 @@ interface Props {
   structuredData?: Record<string, unknown>;
 }
 
-const {
-  title: siteTitle,
-  description: siteDescription,
-  siteLogo,
-  navLinks,
-  lang,
-  author,
-  socialLinks,
-  socialImage,
-  canonicalURL,
-} = SITE_CONFIG;
-
-const {
-  title = siteTitle,
-  description = siteDescription,
-  profilePage = false,
-  structuredData: pageStructuredData,
-} = Astro.props;
+const { title: siteTitle, description: siteDescription, siteLogo, navLinks, lang, author, socialLinks, socialImage, canonicalURL } = SITE_CONFIG;
+const { title = siteTitle, description = siteDescription, profilePage = false, structuredData: pageStructuredData } = Astro.props;
 const isHome = Astro.url.pathname === "/";
 const canonicalBase = canonicalURL ?? "https://jgferreccior-dev.github.io/";
 const resolvedCanonical = new URL(Astro.url.pathname, canonicalBase).href;
 const ogImgUrl = new URL(socialImage, "https://jgferreccior-dev.github.io").href;
-const resolvedNavLinks = navLinks.map((link) => ({
-  ...link,
-  href: isHome || !link.href.startsWith("#") ? link.href : `/${link.href}`,
-}));
-
+const resolvedNavLinks = navLinks.map((link) => ({ ...link, href: isHome || !link.href.startsWith("#") ? link.href : `/${link.href}` }));
 const personSchema = {
   "@type": "Person",
   "@id": `${canonicalBase}#person`,
@@ -49,47 +29,16 @@ const personSchema = {
   "url": canonicalBase,
   "email": "mailto:jgferreccior@gmail.com",
   "sameAs": socialLinks.map((link) => link.href),
-  "knowsAbout": [
-    "Digital Marketing",
-    "Digital Media",
-    "SEO",
-    "Content Marketing",
-    "Social Media",
-    "Performance Marketing",
-    "Digital Analytics",
-    "Communication",
-    "Sports Media",
-  ],
+  "knowsAbout": ["Digital Marketing","Digital Media","SEO","Content Marketing","Social Media","Performance Marketing","Digital Analytics","Communication","Sports Media"],
 };
-
-const baseStructuredData = profilePage || isHome
-  ? {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebSite",
-          "@id": `${canonicalBase}#website`,
-          "name": author,
-          "url": canonicalBase,
-          "inLanguage": "es-PE",
-          "description": siteDescription,
-        },
-        {
-          "@type": "ProfilePage",
-          "url": resolvedCanonical,
-          "name": title,
-          "mainEntity": personSchema,
-        },
-      ],
-    }
-  : null;
-
-const structuredData = pageStructuredData
-  ? {
-      "@context": "https://schema.org",
-      "@graph": [pageStructuredData, personSchema],
-    }
-  : baseStructuredData;
+const baseStructuredData = profilePage || isHome ? {
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "WebSite", "@id": `${canonicalBase}#website`, "name": author, "url": canonicalBase, "inLanguage": "es-PE", "description": siteDescription },
+    { "@type": "ProfilePage", "url": resolvedCanonical, "name": title, "mainEntity": personSchema },
+  ],
+} : null;
+const structuredData = pageStructuredData ? { "@context": "https://schema.org", "@graph": [pageStructuredData, personSchema] } : baseStructuredData;
 const structuredDataJson = structuredData ? JSON.stringify(structuredData) : null;
 ---
 
@@ -102,15 +51,14 @@ const structuredDataJson = structuredData ? JSON.stringify(structuredData) : nul
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="viewport" content="width=device-width" />
     <meta name="theme-color" content="#05080d" />
+    <meta name="keywords" content="Digital Media, SEO, Digital Marketing, Content Marketing, Social Media, Performance Marketing, Analítica Digital, José Ferreccio" />
     <link rel="canonical" href={resolvedCanonical} />
     <link rel="sitemap" href="/sitemap.xml" />
     <link rel="icon" type="image/svg+xml" href={siteLogo} />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-
     <Font cssVariable="--font-gabarito" preload />
     <Font cssVariable="--font-be-vietnam-pro" preload />
-
     {structuredDataJson && <script type="application/ld+json" is:inline set:html={structuredDataJson}></script>}
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_PE" />
@@ -128,18 +76,10 @@ const structuredDataJson = structuredData ? JSON.stringify(structuredData) : nul
     <meta name="twitter:image" content={ogImgUrl} />
     <meta name="twitter:image:alt" content={`${author} — ${title}`} />
   </head>
-  <body class="bg-black font-sans">
-    <a
-      href="#main-content"
-      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-primary focus:px-4 focus:py-3 focus:text-sm focus:font-semibold focus:text-white"
-    >
-      Saltar al contenido
-    </a>
+  <body class="bg-black">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-primary focus:px-4 focus:py-3 focus:text-sm focus:font-semibold focus:text-white">Saltar al contenido</a>
     <Header siteLogo={siteLogo} navLinks={resolvedNavLinks} />
-    <main id="main-content" class="mx-auto max-w-5xl px-5">
-      <slot />
-      {isHome && <TrustStrip />}
-    </main>
+    <main id="main-content" class="mx-auto max-w-5xl px-5"><slot />{isHome && <TrustStrip />}</main>
     <Footer author={author} socialLinks={socialLinks} />
   </body>
 </html>
