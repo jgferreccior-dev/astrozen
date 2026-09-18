@@ -24,7 +24,7 @@ export const caseStudies = {
       "Uso de Meta Ads para amplificar contenidos y apoyar objetivos de registro e interés.",
     ],
     results:
-      "El trabajo permitió incrementar el alcance, las visualizaciones y los clics hacia contenidos académicos, manteniendo una estrategia de comunicación institucional orientada a resultados.",
+      "En un trimestre, el trabajo permitió incrementar el alcance en 275%, las visualizaciones de contenido en 448% y los clics hacia inscripciones y contenidos académicos en 802%, alcanzando 3.1% de engagement.",
     skills: "Content Strategy · Social Media · Meta Ads · Segmentación · Comunicación institucional · Analítica",
   },
   "atv-deportes": {
