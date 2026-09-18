@@ -12,7 +12,7 @@ const { experience } = Astro.props;
 <Section text="Experiencia" href="experience">
   <div class="mb-12 grid gap-6 md:grid-cols-[1fr_auto] md:items-end">
     <p class="max-w-2xl text-base leading-7 text-neutral md:text-lg">
-      Trayectoria desarrollada entre medios de comunicación, plataformas digitales y comunicación académica.
+      Trayectoria desarrollada entre medios de comunicación, plataformas digitales y comunicación académica. Las funciones de Editor de Contenido Web y Líder de Contenido Deportivo se desarrollan en simultáneo dentro de Grupo ATV.
     </p>
     <p class="hidden text-right text-xs font-medium uppercase tracking-[0.18em] text-white/40 md:block">
       Impacto · Contenido · Audiencias
@@ -31,7 +31,7 @@ const { experience } = Astro.props;
           <div class="grid gap-5 md:grid-cols-[180px_1fr] md:gap-10">
             <div>
               <span class="text-sm font-medium text-white/55">{startDate} — {endDate}</span>
-              {index === 1 || index === 2 ? (
+              {company === "Grupo ATV" && (position === "Líder de Contenido Deportivo" || position === "Editor de Contenido Web") ? (
                 <p class="mt-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-primary/80">
                   Rol en paralelo
                 </p>
