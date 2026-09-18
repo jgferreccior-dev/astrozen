@@ -13,8 +13,24 @@ const { description } = Astro.props;
       {description.split("\n\n").map((paragraph) => (
         <p class="mb-6 text-base leading-8 text-neutral md:text-lg">{paragraph.trim()}</p>
       ))}
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a
+          href="/cv"
+          class="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-[#0e141b]"
+        >
+          Ver CV →
+        </a>
+        <a
+          href="https://www.linkedin.com/in/jose-ferreccio-4211901b/"
+          target="_blank"
+          rel="noreferrer"
+          class="rounded-full border border-white/15 px-6 py-3 text-sm font-medium text-white hover:border-white/35 focus:outline-none focus:ring-2 focus:ring-primary"
+        >
+          LinkedIn ↗
+        </a>
+      </div>
     </div>
-    <div class="border border-white/10 p-6">
+    <div class="border border-white/10 bg-[#0b1118] p-6">
       <p class="mb-4 text-xs font-medium uppercase tracking-[0.18em] text-neutral">Áreas de especialización</p>
       <ul class="space-y-3 text-sm text-white">
         <li>01 · Estrategia Digital</li>
